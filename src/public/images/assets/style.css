@@ -101,3 +101,10 @@
 .icon-youtube:before {
   content: "\ea9d";
 }
+.icon-file-pdf:before {
+  content: "\eadf";
+}
+.file-text img{
+  width: 54px;
+ color: hsla(150, 36%, 57%);
+}

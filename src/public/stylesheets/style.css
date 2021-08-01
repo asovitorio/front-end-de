@@ -75,17 +75,29 @@ body {
 .title {
   font-family: 'Big Shoulders Inline Text', cursive, sans-serif;
   font-weight: 700;
-  font-size: 3.5rem;
+  font-size: 5.5rem;
   color: var(--base-color);
   -webkit-font-smoothing: auto;
   text-transform: uppercase;
+  margin-top: 3rem;
 
 }
 
 .title-2 {
   font-family: 'Roboto', cursive, sans-serif;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size:3em;
+  color: var(--text-color-color);
+  -webkit-font-smoothing: auto;
+
+
+}
+
+
+.title-3 {
+  font-family: 'Roboto', cursive, sans-serif;
+  font-weight: 700;
+  font-size:max 1.5rem;
   color: var(--text-color-color);
   -webkit-font-smoothing: auto;
 
@@ -93,11 +105,11 @@ body {
 }
 
 .text h3 {
-  border-bottom: 7px solid red;
-  width: 60%;
+  border-bottom: 7px solid rgba(255, 0, 0, 0.671);
+  width: 90%;
   border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 2px;
   border-top-right-radius: 7px;
 
 }
@@ -109,10 +121,15 @@ body {
   display: flex;
   width: 100%;
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   background-color: var(--body-color);
   top: 0;
   left: 0;
+  background: var(--body-color);
+}
+#header.scroll{
+  box-shadow:0px 0px 12px rgba(0, 0, 0, 0.685) ;
+ z-index: 1000;
 }
 
 nav.container {
@@ -139,6 +156,7 @@ nav ul li {
 nav ul li a {
   transition: 0.2s;
   position: relative;
+  
 }
 
 nav ul li a:hover {
@@ -166,8 +184,15 @@ nav ul li a:hover:after {
 nav .menu {
   opacity: 0;
   visibility: hidden;
+  top: -20rem;
+  transition: 0.4s;
 }
-
+nav .menu ul{
+  display: none;
+}
+nav.show .menu ul{
+  display: grid;
+}
 nav.show .menu {
   opacity: 1;
   visibility: visible;
@@ -187,13 +212,14 @@ nav .icon-cross{
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  top: 2rem;
+  top: -2rem;
   right: 2rem;
- 
+ transition: 0.2s ;
 }
 nav.show .icon-cross{
   visibility: visible;
   opacity: 1;
+  top: 2rem;
   font-size: 1rem;
   transition:all 0.5s inherit;
 }
@@ -202,10 +228,13 @@ nav .toogle{
   font-size: 1.5rem;
   cursor: pointer;
 }
-
+nav .icon-menu{
+  margin-right: 1.5rem;
+  font-size: 3rem;
+}
 /* Logotipo */
-nav.container>div.logo {
-  width: 4rem;
+.logo {
+  width: 5rem;
 
 }
 
@@ -221,11 +250,18 @@ nav.container>div.logo img {
 }
 
 .section {
-  padding: 5rem 0;
+  padding:5rem 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+ 
 }
 .section .title-2{
   margin-bottom: 1rem;
 }
+/* .section header{
+margin-bottom: 4rem;
+} */
 
 main {
   margin-top: calc(var(--header-height) + 2rem);
@@ -240,16 +276,18 @@ main {
   margin: 0;
 
 }
-
+.text p{
+  font-size: 2em;
+}
 #home .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
 
 #home .image {
-  width: 70%;
+  width: 100%;
   position: relative;
-  right: 0.30rem;
+  right: 1rem;
 }
 #home .text h1{
   margin-bottom: 1rem;
@@ -320,4 +358,163 @@ main {
 #about .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+}
+
+/*Serviços  */
+.cards.grid{
+  gap: 1.5rem;
+  padding: 0px 1rem;
+}
+
+.card{
+  padding: 3.625rem 2rem;
+  box-shadow:0px 0px 12px  rgba(0, 0, 0, 0.08);
+  border-bottom: 0.5rem solid var(--base-color);
+  border-radius: 0.25rem 0.25rem 0 0;
+  background: white;
+  text-align: center;
+}
+
+.card i {
+  display: block;
+  margin-bottom: 1.5rem;
+  color: var(--base-color);
+  font-size: 3rem;
+  border-radius:100%;
+ 
+}
+
+.card .title-3{
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* SLIDES */
+#events{
+  background: white;
+}
+#events .container header h2{
+ margin-left: 1rem;
+}
+
+#events blockquote{
+  padding: 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.26);
+  border-radius: 0.25rem;
+
+}
+#events blockquote p{
+   position: relative;
+   text-indent: 2.0rem;
+   color: var(--text-color);
+   font-size: 2rem;
+   text-align: justify;
+}
+#events blockquote p span{
+  font: 700 2em serif;
+  position: absolute;
+  top: -0.5rem;
+  left: -2rem;
+  color: var(--base-color);
+
+}
+#events blockquote cite{
+ display: flex;
+ align-items: center;
+ font-style: normal;
+ color: var(--title-color);
+ font-size: 2rem;
+}
+#events blockquote cite span{
+  background-color: var(--base-color);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ clip-path: circle();
+ padding: 0.15rem;
+  margin: .5rem;
+}
+#events blockquote cite img{
+width: 5rem;
+height: 5rem;
+object-fit: cover;
+clip-path: circle();
+}
+
+/* SWIPER */
+.swiper-slide{
+  height: auto;
+  padding: 2rem 1rem;
+}
+.swiper-pagination-bullet-active{
+  background: var(--base-color);
+}
+
+/* carroussel eventos */
+/* Slideshow container */
+
+
+/* CONTACT */
+#contact .container {
+  position: relative;
+ 
+}
+#contact h2{
+  margin-left: 1.5rem;
+}
+.ilustract{
+background-image: url('../images/assets/undraw_Personal_email_re_4lx7.svg');
+  width: 100%;
+  height: 20rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top:0;
+  left: 0;
+ z-index: -1;
+ opacity: 0.2;
+}
+#contact .container .text {
+  display: flex;flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+#contact .container .text p{
+ color: var(--body-font);
+ text-align: end;
+ font-weight: 900;
+}
+#contact .container .text a{
+  background-color: var(--base-color);
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: white;
+  border-radius: 0.2rem;
+  transition: 0.2s;
+}
+#contact .container .text a:hover{
+  opacity: 0.90;
+}
+#contact .container .text a i{
+  margin-right: 0.3rem;
+}
+#contact .container .links{
+ 
+  display: flex;
+  justify-content: flex-end;
+}
+#contact .container .links ul{
+  list-style: none;
+
+ font-weight: 700;
+
+}
+#contact .container .links ul li {
+  margin-bottom: 1rem;
+}
+
+#contact .container .links ul li i{
+  color: var(--base-color);
+  margin-right: 1rem;
+  font-size: 1.5rem;
 }
