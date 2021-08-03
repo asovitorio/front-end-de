@@ -148,12 +148,12 @@ nav.show ul.grid {
 }
 
 
-nav ul li {
+.navbar-nav .grid li {
   list-style: none;
   text-align: center;
 }
 
-nav ul li a {
+.navbar-nav .grid a {
   transition: 0.2s;
   position: relative;
   
