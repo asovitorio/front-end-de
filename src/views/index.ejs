@@ -17,7 +17,7 @@
 <body>
   <!-- ####### HEADER ######## -->
   <!-- <header id="header" class="">
-    <nav class="container  ">
+    <nav class="container ">
       <div class="logo">
         <img src="/images/assets/logoDE.png" alt="">
       </div>
@@ -34,28 +34,29 @@
       <div class="toogle icon-cross"></div>
     </nav>
   </header> -->
- <!-- As a link -->
-<nav class="navbar navbar-light " id="header">
-  <div class="container-fluid">
-    <div class="logo">
-      <img src="/images/assets/logoDE.png" alt="">
-    </div>
-    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <!-- As a link -->
+  <nav class="navbar navbar-light" id="header">
+    <div class="container-fluid">
+      <div class="logo">
+        <img src="/images/assets/logoDE.png" alt="">
+      </div>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button> -->
-    <div class="collapse navbar-collapse menu" id="navbarNavDropdown">
-      <ul class="navbar-nav grid">
-        <li class="nav-item"><a class="nav-link title-2" href="#home" >Home</a></li>
+      <div class="collapse navbar-collapse menu" id="navbarNavDropdown">
+        <ul class="navbar-nav grid">
+          <li class="nav-item"><a class="nav-link title-2" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link title-2" href="#about">Sobre</a></li>
           <li class="nav-item"><a class="nav-link title-2" href="#service">Serviço</a></li>
-          <li class="nav-item"><a class="nav-link title-2" class="title-2" href="#events">Depoimento</a></li>
+          <li class="nav-item"><a class="nav-link title-2" class="title-2" href="#events">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link title-2" class="title-2" href="#events"></a></li>
           <li class="nav-item"><a class="nav-link title-2" href="#contact">Contato</a></li>
-          
+
         </ul>
       </div>
       <div class="toogle icon-menu"></div>
       <div class="toogle icon-cross"></div>
-</nav>
+  </nav>
 
 
 
@@ -107,7 +108,12 @@
         <div class="cards grid">
           <header>
             <h2 class="title-2">Serviços</h2>
-            <p>explicação breve sobre os Serviços</p>
+            <h3>explicação breve sobre os Serviços</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. At tempora voluptatum sit sunt nesciunt amet.
+              Culpa commodi aliquid perferendis eligendi vel aliquam eius, velit, nostrum saepe perspiciatis amet
+              tenetur expedita!
+            </p>
           </header>
           <div class="card">
             <i class="icon-film"></i>
@@ -125,6 +131,11 @@
             <h3 class="title-3">Informátivos</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet temporibus quis ab error.</p>
           </div>
+          <div class="card">
+            <i class='far fa-file-pdf'></i>
+            <h3 class="title-3">Galerias</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet temporibus quis ab error.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -133,9 +144,47 @@
     <!-- ####### SLIDES DEPOIMENTOS ######## -->
     <section class="section" id="events">
       <div class="container">
+        <div class="context-header">
+          <h2 class="title-2">Eventos</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio eaque nam explicabo ipsam officia quas
+            aliquam quos quis obcaecati, porro animi consequuntur ullam harum praesentium vel consectetur! Architecto,
+            nam error!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse quaerat cum nesciunt sed recusandae natus
+            iste earum, libero maiores sequi deserunt animi quidem, error aperiam optio, commodi sunt? Dolorum, tempora.
+          </p>
+
+        </div>
+
+
         <header>
-          <h2 class="title-2">Recados</h2>
+
+
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/images/assets/motos.jpg" height="10rem" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/images/assets/niver.jpg" height="10rem" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/images/assets/natal.jpg" height="10rem" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
           <div class="events swiper-container">
+            <h3>Comentários de quem foi.</h3>
             <div class="swiper-wrapper">
               <div class="event swiper-slide">
                 <blockquote>
@@ -187,16 +236,15 @@
     <!-- ####### CONTACTS ######## -->
     <div class="divider-2"></div>
     <section class="section" id="contact">
-      <h2 class="title-2">Contato</h2>
       <div class="container grid">
+        <h2 class="title-2">Contato</h2>
         <div class="ilustract"></div>
         <div class="text">
           <p>Entre em contato com <span>Diretoria de Representação</span>,
             queremos tirar suas dúvidas, ouvir sugestões e principalmente as críticas.
           </p>
-          <a href="https://api.whatsapp.com/send?phone=+5511954965202&text=Olá Gostaria de conversar"
-          target="_blank"
-          ><i class="icon-whatsapp"></i>Entrar em contato</a>
+          <a href="https://api.whatsapp.com/send?phone=+5511954965202&text=Olá Gostaria de conversar" target="_blank"><i
+              class="icon-whatsapp"></i>Entrar em contato</a>
         </div>
         <div class="links">
           <ul>
@@ -207,7 +255,23 @@
         </div>
       </div>
     </section>
+    <div class="divider-1"></div>
+    <footer id="footer">
+      <div class="container grid">
+        <div class="context-logo">
+          <div class="logo">
+            <img src="/images/assets/logoWhite.png" alt="">
+          </div>
+          <p>&copy;2021 Diretoria de Empregados - DE</p>
+        </div>
+        <div class="networks-icons">
+          <a href="https://www.facebook.com" target="_blank"> <i class="icon-facebook2"></i></a>
+          <a href="https://www.instagram.com/de_2021_2023/" target="_blank"> <i class="icon-instagram"></i></a>
+          <a href="https://www.youtube.com" target="_blank"> <i class="icon-youtube"></i></a>
+        </div>
 
+      </div>
+    </footer>
   </main>
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
