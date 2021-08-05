@@ -604,8 +604,26 @@ background-image: url('../images/assets/undraw_Personal_email_re_4lx7.svg');
   
   
 }
+#footer .networks-icons a{
+  transition: .3s;
+}
+#footer .networks-icons a:hover{
+ transform: translateY(-15px);
+}
+
+
 #footer .networks-icons i{
   color: white;
   font-size: 3em;
+
+}
+
+/*
+ @media para Responsividade Desck 
+extra large devices: 1200 > 
+large device: 1023 >
+large device: 992
+*/
+@media (min-width:992px){
 
 }
