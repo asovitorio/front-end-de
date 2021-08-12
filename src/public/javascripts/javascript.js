@@ -15,21 +15,7 @@ window.addEventListener('scroll', e => {
 // ########## FIM  1 Controle de scroll coloca a sombra no nav ############
 
 //###### 2 Controle: abre e fecha o menu ########
-const nav = document.querySelector('#header')
-const toogle = document.querySelectorAll('.toogle')
-const links = document.querySelectorAll('.menu ul a')
 
-for (const element of toogle) {
-    element.addEventListener('click', e => {
-        nav.classList.toggle('show')
-    })
-}
-
-for (const link of links) {
-    link.addEventListener('click', e => {
-        nav.classList.remove('show')
-    })
-}
 // ########## FIM  2 Controle ############
 
 // ########## 3 CONTROLE DO SLIDERS ############
@@ -53,7 +39,7 @@ const scrollReveal = ScrollReveal({
 })
 
 scrollReveal.reveal(`
-#home ,
+#home,
 #about .image, #about .title-2, #about .text p,
 #service .cards title-2, #service .cards p, #service .cards .card,
 #events .title-2,#events .events,
