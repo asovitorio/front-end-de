@@ -16,8 +16,8 @@ window.addEventListener('scroll', e => {
 
 //###### 2 Controle: abre e fecha o menu ########
 const nav = document.querySelector('#header')
-const toogle = document.querySelectorAll('nav .toogle')
-const links = document.querySelectorAll('nav ul a')
+const toogle = document.querySelectorAll('.toogle')
+const links = document.querySelectorAll('.menu ul a')
 
 for (const element of toogle) {
     element.addEventListener('click', e => {
@@ -53,10 +53,10 @@ const scrollReveal = ScrollReveal({
 })
 
 scrollReveal.reveal(`
-#home .image,#home .text,
+#home ,
 #about .image, #about .title-2, #about .text p,
 #service .cards title-2, #service .cards p, #service .cards .card,
 #events .title-2,#events .events,
 #contact .title-2, #contact .ilustract,#contact .text p, #contact .text a, #contact .links,
-#footer,.container .grid
+#footer,.container-2 .grid
 `,{interval:100})

@@ -132,7 +132,7 @@ body {
  z-index: 1000;
 }
 
-nav.container {
+nav.container-2 {
   height: var(--header-height);
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -250,8 +250,8 @@ nav>div.logo img {
 }
 
 .section {
-  padding:5rem 0;
- overflow-y: auto;
+  padding: calc(5rem + var(--header-height)) 0;
+  overflow-y: auto; 
   display: flex;
   flex-direction: column;
 }
@@ -276,7 +276,7 @@ main {
   justify-content: center;
 }
 
-#home .container {
+#home .container-2 {
   margin: 0;
 
 }
@@ -320,7 +320,7 @@ main {
   background: white;
   height: 100vh;
 }
-#about .container {
+#about .container-2 {
   margin: 0;
 
 }
@@ -412,7 +412,7 @@ font-size: 1.6em;
  
 }
 
-#events .container header h2{
+#events .container-2 header h2{
  margin-left: 1rem;
 }
 
@@ -490,11 +490,11 @@ clip-path: circle();
 }
 
 /* carroussel eventos */
-/* Slideshow container */
+/* Slideshow container-2 */
 
 
 /* CONTACT */
-#contact .container {
+#contact .container-2 {
   position: relative;
  
 }
@@ -513,18 +513,18 @@ background-image: url('../images/assets/undraw_Personal_email_re_4lx7.svg');
  z-index: -1;
  opacity: 0.2;
 }
-#contact .container .text {
+#contact .container-2 .text {
   display: flex;flex-direction: column;
   justify-content: center;
   align-items:center;
 }
-#contact .container .text p{
+#contact .container-2 .text p{
  color: var(--body-font);
  text-align: end;
  font-weight: 900;
 
 }
-#contact .container .text a{
+#contact .container-2 .text a{
   background-color: var(--base-color);
   padding: 0.75rem;
   font-size: 2rem;
@@ -532,28 +532,28 @@ background-image: url('../images/assets/undraw_Personal_email_re_4lx7.svg');
   border-radius: 0.2rem;
   transition: 0.2s;
 }
-#contact .container .text a:hover{
+#contact .container-2 .text a:hover{
   opacity: 0.90;
 }
-#contact .container .text a i{
+#contact .container-2 .text a i{
   margin-right: 0.3rem;
 }
-#contact .container .links{
+#contact .container-2 .links{
  
   display: flex;
   justify-content: flex-end;
 }
-#contact .container .links ul{
+#contact .container-2 .links ul{
   list-style: none;
 
  font-weight: 700;
 
 }
-#contact .container .links ul li {
+#contact .container-2 .links ul li {
   margin-bottom: 1rem;
 }
 
-#contact .container .links ul li i{
+#contact .container-2 .links ul li i{
   color: var(--base-color);
   margin-right: 1rem;
   font-size: 1.5rem;
@@ -625,5 +625,39 @@ large device: 1023 >
 large device: 992
 */
 @media (min-width:992px){
+
+/* ======== HOME ======== */
+  .grid {
+    grid-template-columns: 1fr 1fr;
+}
+nav .menu{
+  opacity: 1;
+  visibility: visible;
+  top: 0;
+}
+nav .menu ul{
+  display: block;
+  list-style: none;
+}
+
+#home .image {
+  width: 90%;
+ 
+}
+.section {
+ padding: 10rem 0;
+  height: auto;
+
+}
+#service .container-2{
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+footer .grid{
+display: block;
+}
+
 
 }
