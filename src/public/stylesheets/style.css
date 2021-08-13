@@ -11,7 +11,14 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
-
+.btn.btn-primary:hover{
+  background: #56af83;
+  
+}
+.btn.btn-primary{
+  background: var(--base-color);
+  border: 1px solid var(--base-color);
+}
 a {
   text-decoration: none;
 }
@@ -93,7 +100,9 @@ body {
 
 }
 
-
+ul{
+  list-style: none;
+}
 .title-3 {
   font-family: 'Roboto', cursive, sans-serif;
   font-weight: 700;
@@ -153,12 +162,12 @@ nav.show ul.grid {
 }
 
 
-.navbar-nav .grid li {
+nav .grid li {
   list-style: none;
   text-align: center;
 }
 
-.navbar-nav .grid a {
+nav .grid a {
   transition: 0.2s;
   position: relative;
   
@@ -168,21 +177,37 @@ nav ul li a:hover {
   color: var(--base-color);
 
 }
+nav ul li a.active {
+  color:rgba(255, 0, 0, 0.671)
 
+}
+
+nav ul li a.active::after{
+  content: "";
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 0, 0, 0.671);
+  position: absolute;
+  left: 0;
+  bottom: -1.6rem;
+  transition: 0.2s;
+}
 nav ul li a::after {
   content: "";
   width: 0%;
-  height: 4px;
+  height: 6px;
   background: var(--base-color);
   position: absolute;
   left: 0;
-  bottom: -1.5rem;
+  bottom: -1.6rem;
   transition: 0.2s;
 }
+
 
 nav ul li a:hover::after {
   content: "";
   width: 100%;
+ 
 
 }
 
@@ -256,7 +281,7 @@ nav>div.logo img {
 
 .section {
   padding: calc(5rem + var(--header-height)) 0;
-  overflow-y: auto; 
+ 
   display: flex;
   flex-direction: column;
 }
@@ -286,17 +311,19 @@ main {
 
 }
 .text p{
-  font-size: 2em;
+  font-size: 1rem;
 }
 #home .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+ 
 }
 
 #home .image {
   width: 100%;
   position: relative;
   right: 1rem;
+ 
 }
 #home .text h1{
   margin-bottom: 1rem;
@@ -374,6 +401,7 @@ main {
 /*Serviços  */
 #service{
   height: 100vh;
+  overflow-y: auto;
 }
 .cards.grid{
   gap: 1.5rem;
@@ -406,7 +434,7 @@ font-size: 1.6em;
   margin-bottom: 0.75rem;
 }
 .card p{
-  font-size: 1.6em;
+  font-size: 1rem;
 }
 
 /* SLIDES */
@@ -414,6 +442,7 @@ font-size: 1.6em;
   background: white;
   height: 100vh;
   justify-content:space-between;
+  overflow-y: auto;
  
 }
 
@@ -438,11 +467,11 @@ font-size: 1.6em;
    position: relative;
    text-indent: 2.0rem;
    color: var(--text-color);
-   font-size: 2rem;
+   font-size: 1rem;
    text-align: justify;
 }
 #events blockquote p span{
-  font: 700 2em serif;
+  font: 700 1rem serif;
   position: absolute;
   top: -0.5rem;
   left: -2rem;
@@ -454,7 +483,7 @@ font-size: 1.6em;
  align-items: center;
  font-style: normal;
  color: var(--title-color);
- font-size: 2rem;
+ font-size: 1rem;
 }
 #events blockquote cite span{
   background-color: var(--base-color);
@@ -480,8 +509,8 @@ clip-path: circle();
 .carousel-control-next span, .carousel-control-prev span{
   background-color:var(--base-color-alt);
   padding: 3px;
-  width: 53px;
-    height: 53px;
+  width: 40px;
+    height: 40px;
     border-radius: 50%;
     box-shadow:0px 0px 18px rgba(0, 0, 0, 0.7);
 }
@@ -563,6 +592,71 @@ background-image: url('../images/assets/undraw_Personal_email_re_4lx7.svg');
   margin-right: 1rem;
   font-size: 1.5rem;
 }
+/* ================== Time ================== */
+#time {
+  background: white;
+  margin: 0;
+}
+#time  .row>div{
+  margin-bottom: 2rem;
+}
+#time .card{
+margin-bottom: 1rem;
+margin: 0;
+padding: 0;
+border-top-left-radius:1rem ;
+border-top-right-radius:1rem ;
+position: relative;
+z-index: 0;
+}
+#time .card .card-header {
+  padding: 3rem;
+  position: relative;
+  border-top-left-radius:1rem ;
+  border-top-right-radius:1rem ;
+  display: flex;
+justify-content: center;
+
+  margin-bottom: 4rem;
+}
+#time .card .card-header .img-time{
+width: 8rem;
+height:8rem;
+position: absolute;
+top: 0;
+clip-path: circle();
+top:1.5rem;
+box-shadow: 0 0 12px rgba(0, 0, 0, 0.596);
+border-radius: 50%;
+}
+#time .card .card-header .img-time span{
+color: white;
+background-color: rgba(255, 0, 0, 0.52);
+width: 100%;
+display: block;
+position: absolute;
+bottom: -4px;
+font-size: 1.3rem;
+border-radius: 50%;
+padding: 2px;
+}
+#time .card a{
+  display: flex;
+  margin: 0 auto;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 0.7rem;
+  margin-bottom: 2rem;
+  
+}
+#time .card .icon-whatsapp{
+  color: white;
+ font-size: 1.5rem;
+ margin: 0;
+}
+/* ========== FIM  TIME=========== */
 
 /* Styles css of footer */
 
@@ -630,7 +724,9 @@ large device: 1023 >
 large device: 992
 */
 @media (min-width:992px){
-
+.title-2{
+  font-size: 2rem;
+}
 /* ======== HOME ======== */
   .grid {
    
@@ -644,23 +740,106 @@ nav .menu{
 nav .menu ul{
   display: block;
   list-style: none;
+  display: flex;
+  margin-bottom: 0;
+  margin-top: 18px;
+  
 }
+nav .icon-menu{
+display: none;
+}
+#home .text {
+  
+  order: 0;
+}
+
 
 #home .image {
+  order: 1;
   width: 90%;
- 
+}
+nav ul li a.title-2{
+  font-weight: 700;
+ font-size: 1rem;
 }
 .section {
- padding: 10rem 0;
-  height: auto;
+ padding: 5rem 0;
+ margin-top: 2rem;
+ height: 100vh;
 
+}
+/* ====SERVICES==== */
+#service{
+  height: 100vh;
+  overflow-y: hidden;
 }
 #service .container-2{
   display: flex;
   flex-direction: column;
  
 }
+#service .cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 
+
+}
+#service .cards .card{
+  height: 25rem;
+}
+.container-2 header,.context-header{
+  margin: 0 auto;
+  width: 50vw;
+  text-align: center;
+}
+/* =====events====== */
+#events{
+  margin: 0;
+  height: 100vh;
+}
+#events header{
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  align-items: center;
+}
+#events header .carousel{
+  width: 60vw;
+}
+#events header .carousel .carousel-item img{
+ height: 60vh;
+}
+.swiper-container{
+  width: 60vw;
+}
+#events blockquote p span{
+  top: -0.2rem;
+    left: -1.1rem;
+    font: 700 2rem serif;
+
+}
+/* =============== TIME ============== */
+#time .card a{
+  width: 80%;
+}
+/*============== Contact ============== */
+#contact .container-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contact .container-2 .text p{
+  text-align: center;
+  width: 30vw;
+  }
+  #contact .container-2 .text a{
+    font-size: 1rem;
+    transition: all .5s linear;
+  }
+  #contact .container-2 .text a:hover{
+  background-color: rgba(0, 158, 8, 0.479);
+  }
+/* =========== footer ========== */
 footer .grid{
 display: block;
 }
