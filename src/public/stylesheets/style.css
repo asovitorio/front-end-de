@@ -418,8 +418,15 @@ font-size: 1.6em;
   border-radius: 0.25rem 0.25rem 0 0;
   background: white;
   text-align: center;
-}
+  transition: all .3s linear;
 
+}
+#service .card:hover{
+  transition: all .3s linear;
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
 .card i {
   display: block;
   margin-bottom: 1.5rem;
@@ -609,6 +616,11 @@ border-top-left-radius:1rem ;
 border-top-right-radius:1rem ;
 position: relative;
 z-index: 0;
+transition: all .5s;
+}
+#time .card:hover{
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.548);
+  transform: scale(1.1);
 }
 #time .card .card-header {
   padding: 3rem;
@@ -823,6 +835,7 @@ nav ul li a.title-2{
 #time .card a{
   width: 80%;
 }
+
 /*============== Contact ============== */
 #contact h2{
   margin-top: 2rem;
