@@ -533,7 +533,8 @@ clip-path: circle();
  
 }
 #contact h2{
-  margin-left: 1.5rem;
+  margin:0 auto;
+  margin-bottom: 2rem;
 }
 .ilustract{
 background-image: url('../images/assets/undraw_Personal_email_re_4lx7.svg');
@@ -554,7 +555,7 @@ background-image: url('../images/assets/undraw_Personal_email_re_4lx7.svg');
 }
 #contact .container-2 .text p{
  color: var(--body-font);
- text-align: end;
+ text-align: center;
  font-weight: 900;
 
 }
@@ -575,7 +576,7 @@ background-image: url('../images/assets/undraw_Personal_email_re_4lx7.svg');
 #contact .container-2 .links{
  
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 #contact .container-2 .links ul{
   list-style: none;
@@ -823,14 +824,23 @@ nav ul li a.title-2{
   width: 80%;
 }
 /*============== Contact ============== */
+#contact h2{
+  margin-top: 2rem;
+}
+.ilustract{
+  opacity: 0.9;
+}
 #contact .container-2{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  align-items: baseline;
+  height: 100%;
+  padding-left: 6rem;
 }
 #contact .container-2 .text p{
   text-align: center;
-  width: 30vw;
+  width: 15vw;
+  text-align: justify;
   }
   #contact .container-2 .text a{
     font-size: 1rem;

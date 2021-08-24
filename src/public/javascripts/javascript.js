@@ -1,8 +1,9 @@
 // ####### 1 Controle de scroll coloca a sombra no nav ##########
 const header = document.querySelector('#header')
 const navHeigth = header.offsetHeight
-console.log(navHeigth);
-window.addEventListener('scroll', e => {
+const sections = document.querySelectorAll('main section[id]')
+
+function changeHeaderWhenScroll(){
     if (window.scrollY >= navHeigth) {
         header.classList.add('scroll')
         
@@ -11,7 +12,38 @@ window.addEventListener('scroll', e => {
         header.classList.remove('scroll')
         
     }
+}
+
+function activateMenuCurrentSection(){
+const checkpoint = window.pageYOffset + (window.innerHeight/8) * 4
+for (const section of sections) {
+    const sectionTop = section.offsetTop
+    const sectionHeight = section.offsetHeight
+    const sectionId = section.getAttribute('id')
+    const checpointStart = checkpoint >= sectionTop
+    const checpointEnd = checkpoint <= sectionTop + sectionHeight
+    if(checpointStart && checpointEnd){
+        document
+        .querySelector('nav ul li a[href*=' + sectionId + ']' )
+        .classList.add('active')
+    }else{
+        document
+        .querySelector('nav ul li a[href*=' + sectionId + ']' )
+        .classList.remove('active')
+    }
+    console.log(sectionId,sectionTop,sectionHeight);
+
+}
+}
+
+
+window.addEventListener('scroll', e => {
+    changeHeaderWhenScroll()
+    activateMenuCurrentSection()
 })
+// ####### Menu ativo conforme a seção visivel #########
+
+
 // ########## FIM  1 Controle de scroll coloca a sombra no nav ############
 
 //###### 2 Controle: abre e fecha o menu ########
@@ -40,6 +72,12 @@ const swiper = new Swiper('.swiper-container', {
    },
    mousewheel:true,
    keyboard:true,
+   breakpoints:{
+       767:{
+           slidesPerView:2,
+           setWrapperSize:true
+       }
+   }
 
   });
 
