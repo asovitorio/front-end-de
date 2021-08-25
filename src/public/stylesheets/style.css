@@ -21,6 +21,7 @@ html {
 }
 a {
   text-decoration: none;
+  color: var(--text-color);
 }
 
 img {
@@ -427,6 +428,9 @@ font-size: 1.6em;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
+#service a:hover{
+  color: var(--text-color);
+}
 .card i {
   display: block;
   margin-bottom: 1.5rem;
@@ -604,6 +608,7 @@ background-image: url('../images/assets/undraw_Personal_email_re_4lx7.svg');
 #time {
   background: white;
   margin: 0;
+  padding: 5rem 0;
 }
 #time  .row>div{
   margin-bottom: 2rem;
@@ -727,9 +732,66 @@ padding: 2px;
 #footer .networks-icons i{
   color: white;
   font-size: 3em;
-
 }
 
+/* ###### PAGES  ###############*/
+#header-pages{
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.178);
+  position: fixed;
+  width: 100vw;
+  z-index: 100;
+  top: 0;
+}
+#header-pages nav a img{
+  margin-left: 1.5rem;
+  width: 5rem;
+}
+#header-pages .title-pages{
+  font-family: 'Big Shoulders Inline Text', cursive, sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  color: var(--base-color);
+  -webkit-font-smoothing: auto;
+  text-transform: uppercase;
+}
+#header-pages nav a i{
+  color: var(--base-color);
+  margin-right: 1.5rem;
+  font-size: 2rem;
+}
+#videos{
+  display: grid;
+  padding-top: 3rem;
+}
+#videos .card{
+  width: 90vw;
+ height: 40rem;
+  margin: 1rem auto;
+  padding: 0 0 2rem 0;
+  position: relative;
+  border-bottom: 2rem solid var(--base-color);
+  border-top-left-radius:2rem ;
+  border-top-right-radius:2rem ;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.205);
+}
+#videos .card  img{
+  width: 100%;
+  height: 20rem;
+  border-top-left-radius:2rem ;
+  border-top-right-radius:2rem ;
+}
+#videos .card  a{
+ 
+  margin: 0 auto;
+ 
+  bottom: 0;
+
+}
+#videos .card  a i{
+font-size: 8rem;
+color: var(--base-color);
+
+}
 /*
  @media para Responsividade Desck 
 extra large devices: 1200 > 
@@ -776,8 +838,8 @@ nav ul li a.title-2{
  font-size: 1rem;
 }
 .section {
- padding: 5rem 0;
- margin-top: 2rem;
+ padding: 9rem 0;
+
  height: 100vh;
 
 }
@@ -785,7 +847,9 @@ nav ul li a.title-2{
 #service{
   height: 100vh;
   overflow-y: hidden;
+  padding: 5rem 0;
 }
+
 #service .container-2{
   display: flex;
   flex-direction: column;
@@ -809,6 +873,7 @@ nav ul li a.title-2{
 #events{
   margin: 0;
   height: 100vh;
+  padding: 5rem 0;
 }
 #events header{
   display: flex;
@@ -837,8 +902,12 @@ nav ul li a.title-2{
 }
 
 /*============== Contact ============== */
+#contact{
+  padding: 5rem 0;
+}
 #contact h2{
   margin-top: 2rem;
+ 
 }
 .ilustract{
   opacity: 0.9;
