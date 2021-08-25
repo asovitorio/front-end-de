@@ -98,5 +98,4 @@ scrollReveal.reveal(`
 #contact .title-2, #contact .ilustract,#contact .text p, #contact .text a, #contact .links,
 #footer,.container .grid,
 .context-header,#time .row
-
 `,{interval:100})

@@ -764,7 +764,7 @@ padding: 2px;
   padding-top: 3rem;
 }
 #videos .card{
-  width: 90vw;
+  width: 90%;
  height: 40rem;
   margin: 1rem auto;
   padding: 0 0 2rem 0;
@@ -773,25 +773,35 @@ padding: 2px;
   border-top-left-radius:2rem ;
   border-top-right-radius:2rem ;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.205);
+  
 }
 #videos .card  img{
   width: 100%;
   height: 20rem;
   border-top-left-radius:2rem ;
   border-top-right-radius:2rem ;
+  
 }
 #videos .card  a{
- 
-  margin: 0 auto;
- 
-  bottom: 0;
-
+ margin: 0 auto;
+ bottom: 0;
 }
 #videos .card  a i{
 font-size: 8rem;
 color: var(--base-color);
-
+transition: all 0.3s linear;
 }
+#videos .card  a i:hover{
+  color: rgba(255, 0, 0, 0.555);
+}
+#videos .card .text{
+ font-size: 1.5rem;
+  margin: 0 auto;
+ }
+ #videos .card .text span{
+   color: var(--base-color);
+   font-weight: 800;
+ }
 /*
  @media para Responsividade Desck 
 extra large devices: 1200 > 
@@ -936,5 +946,31 @@ footer .grid{
 display: block;
 }
 
-
+/* ############ PAGES VIDEOS ############### */
+#videos{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+#videos .card{
+  height: auto;
+  width: 100%;
+  max-width: 20rem;
+}
+#videos .card h2{
+  font-size: 1.1rem;
+}
+#videos .card img {
+  width: 100%;
+  height: 10rem;
+}
+#videos .card a i {
+  font-size: 5rem;
+}
+#videos .card .text {
+  font-size: 0.7rem;
+}
 }
