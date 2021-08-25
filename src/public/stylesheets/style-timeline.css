@@ -22,8 +22,8 @@
     --body-font: 'DM Sans', sans-serif;
   }
 
-.container{
-    margin-top: 7rem;
+.container #timeline{
+    margin-top: 8rem;
 }
 #timeline .timeline-item:after, header:after, #timeline .timeline-item:before, header:before {
   content: "";
