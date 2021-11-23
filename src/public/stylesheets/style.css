@@ -451,9 +451,9 @@ font-size: 1.6em;
 /* SLIDES */
 #events{
   background: white;
-  height: 100vh;
+  height: auto;
   justify-content:space-between;
-  overflow-y: auto;
+  overflow-y: 100vh;
  
 }
 
@@ -609,6 +609,7 @@ background-image: url('../images/assets/undraw_Personal_email_re_4lx7.svg');
   background: white;
   margin: 0;
   padding: 5rem 0;
+  height: auto;
 }
 #time  .row>div{
   margin-bottom: 2rem;
