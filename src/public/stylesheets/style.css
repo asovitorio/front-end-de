@@ -771,16 +771,16 @@ padding: 2px;
   padding: 0 0 2rem 0;
   position: relative;
   border-bottom: 2rem solid var(--base-color);
-  border-top-left-radius:2rem ;
-  border-top-right-radius:2rem ;
+  border-top-left-radius:1rem ;
+  border-top-right-radius:1rem ;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.205);
   
 }
 #videos .card  img{
   width: 100%;
   height: 20rem;
-  border-top-left-radius:2rem ;
-  border-top-right-radius:2rem ;
+  border-top-left-radius:1rem ;
+  border-top-right-radius:1rem ;
   
 }
 #videos .card  a{
@@ -809,6 +809,97 @@ extra large devices: 1200 >
 large device: 1023 >
 large device: 992
 */
+
+/*######### INICIO LOGIN ##############*/
+.login-content{
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+ 
+  height: 100vh;
+}
+.login .card::after{
+  content: '';
+  width: 90vw;
+height: 50vh;
+  background-color: #56af83;
+  position: absolute;
+  top: -20px;
+  right: -45px;
+  z-index: -2;
+}
+.login .card{
+width: 90vw;
+height: 50vh;
+
+}
+.login .card form{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.login .logo{
+  display: flex;
+ gap: 100px;
+  align-items: center;
+ 
+}
+.login .card form .row>*{
+width: fit-content;
+}
+.login .logo h1{
+  color: #56af83;
+}
+.login .card .form .mb-3{
+ margin-top: 20px;
+ margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  --bs-gutter-x: -6.5rem;
+
+}
+.login .card .form .mb-3 label{
+  padding: 0;
+}
+.login .card .form .mb-3 label i{
+  margin: 0;
+  padding: 0;
+  font-size: 2.2rem;
+}
+
+.login .card .form  button{
+  height: 3rem;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin: 30px auto;
+  gap: 15px;
+  width: 50%;
+
+  
+}
+.login .card .form  button i{
+  font-size: 1.2rem;
+  color: white;
+  padding: 0;
+  margin: 0;
+
+}
+.login .logo img{
+
+ 
+}
+/*#########   FIM LOGIN  ##############*/
+
+
+
 @media (min-width:992px){
 .title-2{
   font-size: 2rem;
@@ -975,4 +1066,23 @@ display: block;
 #videos .card .text {
   font-size: 0.7rem;
 }
+/*######### INICIO LOGIN ##############*/
+.login .card{
+  max-width: 600px;
+  max-height: 400px;
+}
+.card::after{
+  max-width: 600px;
+  max-height: 400px;
+}
+.login .card form .row>*{
+ 
+  }
+.login .logo{
+  
+ gap: 150px;
+ 
+ 
+}
+/*#########   FIM LOGIN  ##############*/
 }

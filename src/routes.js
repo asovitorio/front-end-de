@@ -8,6 +8,7 @@ route.get('/videos',pagesControllers.videos)
 route.get('/podcast',pagesControllers.podcast)
 route.get('/informativos',pagesControllers.informativos)
 route.get('/galeria',pagesControllers.galeria)
+route.get('/login',pagesControllers.galeria)
 
 // ############  Pages ############
 route.get('/admin/password/:token',adminControllers.password)
