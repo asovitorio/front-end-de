@@ -32,7 +32,7 @@ const adminControllers = {
                
         return res.render('admin/login')
         } catch (error) {
-            res.send('erro token invalid' + error)
+            res.send('erro token invalid    ' + error)
         }
  
     }
