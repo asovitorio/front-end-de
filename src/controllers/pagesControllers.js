@@ -15,6 +15,7 @@ const pagesControllers = {
     galeria: (req,res) => {
         return res.render('pages/galeria',{title:'Galeria',icon:'icon-images'})
     },
+   
     
 
 }
