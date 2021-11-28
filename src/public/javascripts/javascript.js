@@ -6,7 +6,6 @@ const sections = document.querySelectorAll('main section[id]')
 function changeHeaderWhenScroll(){
     if (window.scrollY >= navHeigth) {
         header.classList.add('scroll')
-        
         header.style.transition = "0.4s"
     } else {
         header.classList.remove('scroll')
@@ -67,9 +66,9 @@ for (const link of links) {
 // ########## 3 CONTROLE DO SLIDERS ############
 const swiper = new Swiper('.swiper-container', {
     slidesPerView:1,
-   pagination:{
-      el:'.swiper-pagination' 
-   },
+//    pagination:{
+//       el:'.swiper-pagination' 
+//    },
    mousewheel:true,
    keyboard:true,
    breakpoints:{
