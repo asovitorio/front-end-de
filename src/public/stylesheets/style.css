@@ -825,6 +825,14 @@ large device: 992
  width: 100%;
   height: 700px;
 }
+.card-header-login .card-logo{
+  position: absolute;
+}
+.card-header-login .card-logo img{
+  position: absolute;
+  top:-40px;
+  left: 0;
+}
 .form-login .input-login span i{
   margin: 0;
   font-size: 35px;
@@ -1036,7 +1044,7 @@ display: block;
 }
 .card-header-login .card-title-login{
   display: flex;
-  width: 75%;
+  width:100%;
   justify-content: center;
   align-items: center;
 }
