@@ -825,7 +825,22 @@ large device: 992
  width: 100%;
   height: 700px;
 }
-
+.form-login .input-login span i{
+  margin: 0;
+  font-size: 35px;
+}
+.form-login  button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+.form-login  button i{
+  margin: 0;
+  font-size: 15px;
+  color: white;
+}
 /*#########   FIM LOGIN  ##############*/
 
 
