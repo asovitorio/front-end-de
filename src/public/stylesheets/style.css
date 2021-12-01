@@ -812,95 +812,47 @@ large device: 992
 
 /*######### INICIO LOGIN ##############*/
 .login-content{
-  display: flex;
-  margin: 0;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
- 
+  margin: 0 ;
   height: 100vh;
+  display: flex;
+  justify-content: center;
 }
-.login .card::after{
-  content: '';
-  width: 90vw;
-height: 50vh;
-  background-color: #56af83;
+.login-content .login{
+  width: 100vw;
+  padding: 20px;
+}
+.login-content .login .card{
+ width: 100%;
+  height: 700px;
+}
+.card-header-login .card-logo{
   position: absolute;
-  top: -20px;
-  right: -45px;
-  z-index: -2;
 }
-.login .card{
-width: 90vw;
-height: 50vh;
-
+.card-header-login .card-logo img{
+  position: absolute;
+  top:-40px;
+  left: 0;
 }
-.login .card form{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.login .logo{
-  display: flex;
- gap: 100px;
-  align-items: center;
- 
-}
-.login .card form .row>*{
-width: fit-content;
-}
-.login .logo h1{
-  color: #56af83;
-}
-.login .card .form .mb-3{
- margin-top: 20px;
- margin-bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  --bs-gutter-x: -6.5rem;
-
-}
-.login .card .form .mb-3 label{
-  padding: 0;
-}
-.login .card .form .mb-3 label i{
+.form-login .input-login span i{
   margin: 0;
-  padding: 0;
-  font-size: 2.2rem;
+  font-size: 35px;
 }
-
-.login .card .form  button{
-  height: 3rem;
-  padding: 5px;
+.form-login  button{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
-  margin: 30px auto;
-  gap: 15px;
-  width: 50%;
-
-  
+  gap: 10px;
+  font-size: 18px;
 }
-.login .card .form  button i{
-  font-size: 1.2rem;
+.form-login  button i{
+  margin: 0;
+  font-size: 15px;
   color: white;
-  padding: 0;
-  margin: 0;
-
-}
-.login .logo img{
-
- 
 }
 /*#########   FIM LOGIN  ##############*/
 
 
-
-@media (min-width:992px){
+@media (min-width:920px){
 .title-2{
   font-size: 2rem;
 }
@@ -1067,22 +1019,68 @@ display: block;
   font-size: 0.7rem;
 }
 /*######### INICIO LOGIN ##############*/
-.login .card{
-  max-width: 600px;
-  max-height: 400px;
+.login-content .login{
+ 
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
-.card::after{
-  max-width: 600px;
-  max-height: 400px;
+
+.login-content .login .card::before{
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: var(--base-color);
+  position: absolute;
+  top: -8.3%;
+  right: -16%;
+  z-index: -2;
 }
-.login .card form .row>*{
+.card-header-login{
+  display: flex;
+}
+.card-header-login .card-logo{
+  width: 25%;
+}
+.card-header-login .card-title-login{
+  display: flex;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+}
+.card-header-login .card-logo img{
+  width: 100px;
+}
+.form-login{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
  
-  }
-.login .logo{
-  
- gap: 150px;
- 
- 
+  flex-direction: column;
+  padding:0 80px;
+  align-content: space-around;
+}
+.input-login{
+  margin-bottom: 15px;
+  margin-top: 15px;
+  height:80px;
 }
 /*#########   FIM LOGIN  ##############*/
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .login-content .login .card{
+    max-width:700px;
+    max-height: 450px;
+  }
+  .input-login{
+    margin-bottom: 30px;
+    
+    height:50px;
+  }
+  /*#########   FIM LOGIN  ##############*/
+  }
+  
 }

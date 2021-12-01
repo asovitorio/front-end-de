@@ -1,10 +1,33 @@
 <%- include('../partials/head.ejs') %>
 
-<main class="login-content">
-
+  <main class="login-content">
     <div class="login">
-        
-        <div class="card">
+      <div class="card ">
+        <div class="card-header-login">
+          <div class="card-logo"><img src="/images/assets/logoDE.png" alt="" srcset=""></div>
+          <div class="card-title-login">
+            <h1>Login</h1>
+          </div>
+        </div>
+        <div class="form-login">
+          <form action="/login" method="post">
+            <div class="input-group  input-login">
+              <span class="input-group-text" id="basic-addon1"><i class="icon-user"></i></span>
+              <input type="text" class="form-control" placeholder="Usuário" aria-label="Username"
+                aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group input-login ">
+              <span class="input-group-text" id="basic-addon1"><i class="icon-lock"></i></span>
+              <input type="text" class="form-control" placeholder="Senha" aria-label="Username"
+                aria-describedby="basic-addon1">
+            </div>
+            <button type="submit" class="btn">Entrar <i class="icon-arrow-right"></i></button>
+          </form>
+        </div>
+      </div>
+
+
+      <!-- <div class="card">
             <div class="logo"><img src="/images/assets/logoDE.png" alt=""> <h1>Login</h1></div>
             <form class="form">
                 <div class=" mb-3">
@@ -27,13 +50,13 @@
                
               </form>
 
-        </div>
-        
+        </div> -->
+
     </div>
 
-</main>
+  </main>
 
 
 
 
-<%- include('../partials/scripts.ejs') %>
+  <%- include('../partials/scripts.ejs') %>
