@@ -451,9 +451,9 @@ font-size: 1.6em;
 /* SLIDES */
 #events{
   background: white;
-  height: auto;
+  height: 100vh;
   justify-content:space-between;
-  overflow-y: 100vh;
+  overflow-y: auto;
  
 }
 
@@ -771,16 +771,16 @@ padding: 2px;
   padding: 0 0 2rem 0;
   position: relative;
   border-bottom: 2rem solid var(--base-color);
-  border-top-left-radius:1rem ;
-  border-top-right-radius:1rem ;
+  border-top-left-radius:2rem ;
+  border-top-right-radius:2rem ;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.205);
   
 }
 #videos .card  img{
   width: 100%;
   height: 20rem;
-  border-top-left-radius:1rem ;
-  border-top-right-radius:1rem ;
+  border-top-left-radius:2rem ;
+  border-top-right-radius:2rem ;
   
 }
 #videos .card  a{
@@ -809,50 +809,7 @@ extra large devices: 1200 >
 large device: 1023 >
 large device: 992
 */
-
-/*######### INICIO LOGIN ##############*/
-.login-content{
-  margin: 0 ;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-}
-.login-content .login{
-  width: 100vw;
-  padding: 20px;
-}
-.login-content .login .card{
- width: 100%;
-  height: 700px;
-}
-.card-header-login .card-logo{
-  position: absolute;
-}
-.card-header-login .card-logo img{
-  position: absolute;
-  top:-40px;
-  left: 0;
-}
-.form-login .input-login span i{
-  margin: 0;
-  font-size: 35px;
-}
-.form-login  button{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  font-size: 18px;
-}
-.form-login  button i{
-  margin: 0;
-  font-size: 15px;
-  color: white;
-}
-/*#########   FIM LOGIN  ##############*/
-
-
-@media (min-width:920px){
+@media (min-width:992px){
 .title-2{
   font-size: 2rem;
 }
@@ -998,7 +955,6 @@ display: block;
   justify-content: center;
   padding-left: 2rem;
   padding-right: 2rem;
-
 }
 #videos .card{
   height: auto;
@@ -1018,69 +974,4 @@ display: block;
 #videos .card .text {
   font-size: 0.7rem;
 }
-/*######### INICIO LOGIN ##############*/
-.login-content .login{
- 
- display: flex;
- justify-content: center;
- align-items: center;
-}
-
-.login-content .login .card::before{
-  content: '';
-  height: 100%;
-  width: 100%;
-  background-color: var(--base-color);
-  position: absolute;
-  top: -8.3%;
-  right: -16%;
-  z-index: -2;
-}
-.card-header-login{
-  display: flex;
-}
-.card-header-login .card-logo{
-  width: 25%;
-}
-.card-header-login .card-title-login{
-  display: flex;
-  width:100%;
-  justify-content: center;
-  align-items: center;
-}
-.card-header-login .card-logo img{
-  width: 100px;
-}
-.form-login{
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
- 
-  flex-direction: column;
-  padding:0 80px;
-  align-content: space-around;
-}
-.input-login{
-  margin-bottom: 15px;
-  margin-top: 15px;
-  height:80px;
-}
-/*#########   FIM LOGIN  ##############*/
-}
-
-
-@media only screen and (min-width: 1200px) {
-  .login-content .login .card{
-    max-width:700px;
-    max-height: 450px;
-  }
-  .input-login{
-    margin-bottom: 30px;
-    
-    height:50px;
-  }
-  /*#########   FIM LOGIN  ##############*/
-  }
-  
 }
