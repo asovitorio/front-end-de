@@ -809,6 +809,10 @@ extra large devices: 1200 >
 large device: 1023 >
 large device: 992
 */
+
+/* ########### LOGIN  */
+
+
 @media (min-width:992px){
 .title-2{
   font-size: 2rem;
