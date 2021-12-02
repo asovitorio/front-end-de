@@ -810,10 +810,99 @@ large device: 1023 >
 large device: 992
 */
 
-/* ########### LOGIN  */
+/* ########### LOGIN ############# */
+.login-content {
+  margin: 0;
+  padding: 0;
+}
+.login-content .login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  height: 100vh;
+ padding: 50px;
+  
+}
+.login-content .login .card-login{
+  background-color: white;
+width: 100%;
+height: 50rem;
+border-radius: 10px;
+box-shadow: 0 3px 25px rgba(0, 0, 0, 0.363);
+padding:30px;
+border-bottom: 20px solid #56af83;
+}
+.login-content .login .card-login .card-header-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+ 
+  
+}
+.login-content .login .card-login .card-header-login .card-logo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 3rem;
+}
+.login-content .login .card-login .card-header-login .card-logo img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+}
+.login-content .login .card-login .card-header-login .card-title-login{
+ 
+  text-align: center;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:50px ;
+  
+}
+.login-content .login .card-login .card-header-login .card-title-login h1{
+  font-size: 4rem;
+}
+.login-content .login .card-login .form-login {
+  height: 73%;
+  
+}
+.login-content .login .card-login .form-login form {
+  height: 73%;
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+  
+}
+.login-content .login .card-login .form-login form .button-login{
+  display: flex;
+  justify-content: end;
+}
+.login-content .login .card-login .form-login form  button{
+height: 4rem;
+  width: 15rem;
+  font-size: 2rem;
+  
+}
+.login-content .login .card-login .form-login form .input-login input{
+  height: 5rem;
+  font-size: 2rem;
+}
+.login-content .login .card-login .form-login form .input-login span i{
+color: #56af83;
+font-size: 2rem;
+}
+
+/* ########### FIM LOGIN ############# */
 
 
 @media (min-width:992px){
+ 
 .title-2{
   font-size: 2rem;
 }
@@ -978,4 +1067,52 @@ display: block;
 #videos .card .text {
   font-size: 0.7rem;
 }
+
+/* ############# TELA LOGIN ############# */
+.login-content .login .card-login{
+  width: 700px;
+  height: 500px;
+}
+.login-content .login .card-login::after{
+  content: '';
+  position: absolute;
+  top: 34px;
+  right: 294px;
+  width: 700px;
+  height: 500px;
+  background-color: #56af83;
+  z-index: -2;
+  border-radius: 10px;
+
+}
+.login-content .login .card-login .card-header-login .card-logo img{
+ width: 5rem;
+  
+}
+.login-content .login .card-login .card-header-login .card-title-login{
+  height: 115px;
+}
+.login-content .login .card-login .card-header-login .card-title-login h1{
+  font-size: 3rem;
+}
+.login-content .login .card-login .form-login form .input-login input{
+  height:3rem;
+  font-size: 1.2rem;
+}
+.login-content .login .card-login .form-login form{
+  justify-content: center;
+}
+.login-content .login .card-login .form-login form .button-login{
+  display: flex;
+  justify-content: end;
+  
+}
+.login-content .login .card-login .form-login form  button{
+height: 3rem;
+  width: 15rem;
+  font-size: 1.2rem;
+  
+}
+/* ############# FIM TELA LOGIN ############# */
+
 }

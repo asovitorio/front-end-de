@@ -2,7 +2,7 @@
 
   <main class="login-content">
     <div class="login">
-      <div class="card ">
+      <div class="card-login">
         <div class="card-header-login">
           <div class="card-logo"><img src="/images/assets/logoDE.png" alt="" srcset=""></div>
           <div class="card-title-login">
@@ -10,18 +10,21 @@
           </div>
         </div>
         <div class="form-login">
-          <form action="/login" method="post">
+          <form action="/admin/login" method="post">
             <div class="input-group  input-login">
               <span class="input-group-text" id="basic-addon1"><i class="icon-user"></i></span>
-              <input type="text" class="form-control" placeholder="Usuário" aria-label="Username"
+              <input type="text" name="login" class="form-control" placeholder="Usuário" aria-label="Username"
                 aria-describedby="basic-addon1">
             </div>
             <div class="input-group input-login ">
               <span class="input-group-text" id="basic-addon1"><i class="icon-lock"></i></span>
-              <input type="text" class="form-control" placeholder="Senha" aria-label="Username"
+              <input type="password" class="form-control" name="password" placeholder="Senha" aria-label="Username"
                 aria-describedby="basic-addon1">
             </div>
-            <button type="submit" class="btn">Entrar <i class="icon-arrow-right"></i></button>
+            <div class="button-login">
+              <button type="submit" class="btn">Entrar <i class="icon-arrow-right"></i></button>
+
+            </div>
           </form>
         </div>
       </div>
