@@ -16,7 +16,7 @@ const pagesControllers = {
         return res.render('pages/galeria',{title:'Galeria',icon:'icon-images'})
     },
     login: (req,res) => {
-        return res.render('pages/login',{title:'Login',icon:'icon-images'})
+        return res.render('pages/login',{title:'Login',icon:'icon-images',msg:false})
     },
 
     

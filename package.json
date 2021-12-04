@@ -1,4 +1,3 @@
-
 {
   "name": "front-end-de",
   "version": "0.0.0",
@@ -15,6 +14,7 @@
     "dotenv": "^10.0.0",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+    "express-session": "^1.17.2",
     "http-errors": "~1.6.3",
     "jsonwebtoken": "^8.5.1",
     "method-override": "^3.0.0",

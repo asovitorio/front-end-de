@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
 const api = require('../api/endpoind')
-
+var session = require('express-session')
 const adminControllers = {
 
     password: (req, res) => {
@@ -18,8 +18,23 @@ const adminControllers = {
             return res.render('error', { error, message: 'token invalid' })
         }
     },
-    login: (req, res) => {
-        res.send(req.body)
+    login:async (req, res) => {
+       try {
+
+           
+        const {token} = await (await api.post('/auth',req.body)).data
+
+        const user =  jwt.decode(token)
+       const msg = false
+     
+       return res.render('admin/home',{user,msg})
+       
+    } catch (error) {
+        const msg = {message:'Usuário ou senha invalido!',title:'Erro:401',local:'login'}
+        return res.render('pages/login',{msg})
+        
+        
+       }
     },
     update: async (req, res) => {
         try {

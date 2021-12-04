@@ -1072,19 +1072,9 @@ display: block;
 .login-content .login .card-login{
   width: 700px;
   height: 500px;
+  box-shadow: 100px -50px 0px  #56af83; 
 }
-.login-content .login .card-login::after{
-  content: '';
-  position: absolute;
-  top: 34px;
-  right: 294px;
-  width: 700px;
-  height: 500px;
-  background-color: #56af83;
-  z-index: -2;
-  border-radius: 10px;
 
-}
 .login-content .login .card-login .card-header-login .card-logo img{
  width: 5rem;
   
@@ -1116,3 +1106,5 @@ height: 3rem;
 /* ############# FIM TELA LOGIN ############# */
 
 }
+
+
