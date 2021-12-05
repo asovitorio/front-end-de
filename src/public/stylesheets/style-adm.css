@@ -13,6 +13,19 @@ body{
     
 }
 
+/* ############ Estilo do adm main ############*/
+
+.admin-main{
+  display: grid;
+  grid-template-areas:
+  "logo nav nav" 150px 1fr 1fr
+  
+
+}
+
+/*FIM Estilo do adm main */
+
+
 .btn-person {
     width: 10rem;
     color: #ffffff;
