@@ -1,86 +1,211 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-     
+
 }
 
 
-body{
+body {
     font-family: 'Roboto', cursive, sans-serif;
-   
-    
+
+
 }
 
 /* ############ Estilo do adm main ############*/
+/* ############# TELA HOME ######### */
+.admin-main {
+    display: grid;
+    grid-template-areas:
+        "logo  nav"
+        "section section"
+        "footer footer";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 10vh 80vh 10vh;
+}
 
-.admin-main{
-  display: grid;
-  grid-template-areas:
-  "logo nav nav" 150px 1fr 1fr
+.logo-admin {
+    grid-area: logo;
+    background-color:#faebd7;
+   
+    z-index:200
+}
+
+#logo-img-admin {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 3px #6ab9919a;
+
+}
+
+#logo-img-admin img {
+    position: relative;
+
+}
+
+
+.nav-admin {
+    display: flex;
+    grid-area: nav;
+    text-align: end;
+    padding: 5px 20px;
+    justify-content: space-around;
+    align-items: center;
+    z-index:100;
+    background-color:#faebd7;
+    border-bottom: solid 3px #6ab9919a;
+}
+
+.nav-admin h2 {
+
+    font-size: 1rem;
+
+}
+
+.logo-admin img {
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.aside-admin {
+    grid-area: aside;
+    position: fixed;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.452);
+    transition: all 0.5s linear;
+    top: 0;
+    left: 0;
+    width: 60vw;
+    transform: translateX(-61vw);
+    height: 100vh;
+    z-index: 50;
+    border-right: 1px solid #d6d0d0;
+}
+
+.show-aside-admin {
+    transform: translateX(0);
+    transition: all 0.5s linear;
+
+
+}
+
+.content {
+    position: relative;
+    grid-area: section;
+    background-color: #ece6e6;
+   }
+
+.footer {
+    grid-area: footer;
   
 
 }
 
-/*FIM Estilo do adm main */
+/* ############### FIM Estilo tela HOME do adm main #############*/
 
 
 .btn-person {
     width: 10rem;
     color: #ffffff;
-    background-color: #00BFA6;
+    background-color: #6ab991;
     padding: 10px;
     transition: all 0.3s linear;
     font-weight: 800;
 }
-.btn-person:hover{
-    background-color: #00bfa69a;
+
+.btn-person:hover {
+    background-color: #6ab9919a;
     color: #ffffff;
 }
-.admin-container{
+
+.admin-container {
     background-repeat: no-repeat;
     display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 100vh;
-  background-color: antiquewhite;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100vh;
+    background-color: antiquewhite;
 }
 
-.logo{
+.logo {
     position: fixed;
-     left: 10px;
-     top: 10px;
-     width: 100px;
- }
-
-.info{
- margin-left:50px;
- margin-top:100px;
+    left: 10px;
+    top: 10px;
+    width: 100px;
 }
- div img{
-     position: fixed;
-     left: 0;
- width: 50%;
- opacity: 0.9;
- }
- span{
-     color: #00BFA6;
- }
-.info h1{
+
+.info {
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+div img {
+    position: fixed;
+    left: 0;
+    width: 50%;
+    opacity: 0.9;
+}
+
+span {
+    color: #6ab991;
+}
+
+.info h1 {
     margin-top: 10px;
     color: #2f2e2e;
 }
-.form{
+
+.form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 40px;
 }
 
+@media (min-width:740px) {
+    .admin-main {
+        grid-template-areas:
+            "logo nav nav"
+            "aside section section"
+            "aside footer footer";
+        grid-template-columns: 1fr 2fr 2fr;
+       
+
+    }
+    .logo-admin img {
+        width: 70px;
+    }
+
+    .aside-admin {
+        position: relative;
+        width: auto;
+        height: auto;
+        transform: translateX(0);
+   
+     box-shadow: none;
+
+    }
+
+    .nav-admin {
+        justify-content: center;
+    }
+
+    .nav-admin a {
+        display: none;
+    }
+
+    .nav-admin h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
 
 /* ############ TELA DE LOGIN ############### */
 
 
 /* ############ FIM TELA DE LOGIN ############### */
-
-
