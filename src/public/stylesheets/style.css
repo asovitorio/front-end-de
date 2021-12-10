@@ -655,9 +655,10 @@ width: 100%;
 display: block;
 position: absolute;
 bottom: -4px;
-font-size: 1.3rem;
+font-size: 0.9rem;
 border-radius: 50%;
 padding: 2px;
+margin-bottom: 2px;
 }
 #time .card a{
   display: flex;
@@ -771,16 +772,16 @@ padding: 2px;
   padding: 0 0 2rem 0;
   position: relative;
   border-bottom: 2rem solid var(--base-color);
-  border-top-left-radius:2rem ;
-  border-top-right-radius:2rem ;
+  border-top-left-radius:10px ;
+  border-top-right-radius:10px ;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.205);
   
 }
 #videos .card  img{
   width: 100%;
   height: 20rem;
-  border-top-left-radius:2rem ;
-  border-top-right-radius:2rem ;
+  border-top-left-radius:10px ;
+  border-top-right-radius:10px ;
   
 }
 #videos .card  a{
@@ -961,7 +962,7 @@ nav ul li a.title-2{
 }
 #service .cards{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr ;
 
 
 }
