@@ -7,8 +7,15 @@ var logger = require('morgan');
 var cors = require('cors')
 var routes = require('./routes');
 const methodOverride = require('method-override')
+var session = require('express-session')
 
 var app = express();
+app.use(session({
+  secret: 'keyboard cat',
+  resave: true,
+  saveUninitialized: true,
+  
+}))
 app.use(cors())
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

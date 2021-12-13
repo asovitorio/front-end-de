@@ -103,7 +103,10 @@ body {
     
     
 }
-
+#active-teste{
+    color: #ff0000a8;
+    border-right: 8px solid #ff0000a8;
+}
 .content {
     position: relative;
     grid-area: section;
@@ -112,14 +115,14 @@ body {
 
 .footer {
     grid-area: footer;
-    background-color: ;
+  
     
     
 }
 .admin-avatar{
     padding: 10px;
     margin-top: 65px;
-   
+    margin-bottom: 0px;
     width: 100%;
    /* height: 35vh; */
    display: flex;
@@ -153,7 +156,7 @@ body {
 }
 .admin-avatar a{
   text-decoration: none;  
-  color: #009e4f;
+  color: #ff0000b2;
   font-size:1.2rem;
 }
 .accordion-button{
@@ -266,7 +269,7 @@ span {
         padding: 10px;
         margin-top: 10px;
         background-color: white;
-        margin-bottom: 0;
+        margin-bottom: 15px;
        height: 28vh;
        /* background: repeating-radial-gradient(#6ab991, #6ab9917a 20%); */
     }
