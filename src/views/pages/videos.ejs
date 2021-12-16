@@ -2,92 +2,28 @@
 <%- include('../partials/header-pages.ejs') %>
 
 <main id="videos">
+  <% episodes.map(episode =>{%>
 
-  <div class="card">
-    <div class="image-card-video">
-      <img src="https://img.youtube.com/vi/WhIfu2Fwi0s/0.jpg" title="YouTube video" allowfullscreen></img>
+    <div class="card">
+      <div class="image-card-video">
+        <img src="<%=episode.thumbnail%>" title="YouTube video" allowfullscreen></img>
+      </div>
+      <div class="divider-1"></div>
+      <div>
+        <a href="/view-video?id=<%=episode.id%>"><i class="icon-play"></i></a>
+      </div>
+      <div class="">
+        <h2><%=episode.title%></h2>
+        <p class="text">
+          <span>Participante:</span><%=episode.members%>
+          <br>
+          <span>Duração:</span> <%=episode.video.duration%> min.
+        </p>
+      </div>
     </div>
-    <div class="divider-1"></div>
-    <div>
-      <a href="https://www.youtube.com/watch?v=WhIfu2Fwi0s"><i class="icon-play"></i></a>
-    </div>
-    <div class="">
-      <h2>#1-FALA DIRETOR - ASÉDIO SEXUAL </h2>
-      <p class="text">
-        <span>Participante:</span> Rodney Caetano, Alessandro Barbosa Vitorio
-        <br>
-        <span>Duração:</span> 64min
-      </p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="image-card-video">
-      <img src="https://img.youtube.com/vi/WhIfu2Fwi0s/0.jpg" title="YouTube video" allowfullscreen></img>
-    </div>
-    <div class="divider-1"></div>
-    <div>
-      <a href="https://www.youtube.com/watch?v=WhIfu2Fwi0s"><i class="icon-play"></i></a>
-    </div>
-    <div class="">
-      <h2>#1-FALA DIRETOR - ASÉDIO SEXUAL </h2>
-      <p class="text">
-        <span>Participante:</span> Rodney Caetano, Alessandro Barbosa Vitorio
-        <br>
-        <span>Duração:</span> 64min
-      </p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="image-card-video">
-      <img src="https://img.youtube.com/vi/WhIfu2Fwi0s/0.jpg" title="YouTube video" allowfullscreen></img>
-    </div>
-    <div class="divider-1"></div>
-    <div>
-      <a href="https://www.youtube.com/watch?v=WhIfu2Fwi0s"><i class="icon-play"></i></a>
-    </div>
-    <div class="">
-      <h2>#1-FALA DIRETOR - ASÉDIO SEXUAL </h2>
-      <p class="text">
-        <span>Participante:</span> Rodney Caetano, Alessandro Barbosa Vitorio
-        <br>
-        <span>Duração:</span> 64min
-      </p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="image-card-video">
-      <img src="https://img.youtube.com/vi/WhIfu2Fwi0s/0.jpg" title="YouTube video" allowfullscreen></img>
-    </div>
-    <div class="divider-1"></div>
-    <div>
-      <a href="https://www.youtube.com/watch?v=WhIfu2Fwi0s"><i class="icon-play"></i></a>
-    </div>
-    <div class="">
-      <h2>#1-FALA DIRETOR - ASÉDIO SEXUAL </h2>
-      <p class="text">
-        <span>Participante:</span> Rodney Caetano, Alessandro Barbosa Vitorio
-        <br>
-        <span>Duração:</span> 64min
-      </p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="image-card-video">
-      <img src="https://img.youtube.com/vi/WhIfu2Fwi0s/0.jpg" title="YouTube video" allowfullscreen></img>
-    </div>
-    <div class="divider-1"></div>
-    <div>
-      <a href="https://www.youtube.com/watch?v=WhIfu2Fwi0s"><i class="icon-play"></i></a>
-    </div>
-    <div class="">
-      <h2>#1-FALA DIRETOR - ASÉDIO SEXUAL </h2>
-      <p class="text">
-        <span>Participante:</span> Rodney Caetano, Alessandro Barbosa Vitorio
-        <br>
-        <span>Duração:</span> 64min
-      </p>
-    </div>
-  </div>
+    <% }) %> 
+   
+ 
 
 
 </main>

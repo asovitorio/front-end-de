@@ -1,0 +1,27 @@
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/header-pages.ejs') %>
+
+
+<div class="content-video">
+    
+    <div class="video">
+        <iframe src="<%=episode.video.url%>" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+            <div class="descriptyon-video">
+                <div>
+                    <h1><%=episode.title%></h1>
+                    <span><%=episode.members%> - Duração: <%=episode.video.duration%> min. </span>
+                   
+                    <p><%=episode.description%></p>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    
+   
+    <%- include('../partials/scripts.ejs') %>

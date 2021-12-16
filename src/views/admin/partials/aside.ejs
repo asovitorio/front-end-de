@@ -14,12 +14,12 @@
                     <i class="icon-cog"></i> Site
                 </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
+            <div id="collapseOne" class="accordion-collapse collapse <%=active.home=='active' | active.about=='active' | active.service =='active'?'show':'' %> " aria-labelledby="headingOne"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <a href="#" id="active-teste">  <i class="icon-home"></i> HOME</a>
-                    <a href="#">  <i class="icon-man"></i> SOBRE</a>
-                    <a href="#">  <i class="icon-briefcase"></i> SERVIÇO</a>
+                    <a href="/admin/home" id="<%=active.home%>">  <i class="icon-home"></i> HOME</a>
+                    <a href="/admin/about" id="<%=active.about%>">  <i class="icon-man"></i> SOBRE</a>
+                    <a href="/admin/service"id="<%=active.service%>">  <i class="icon-briefcase"></i> SERVIÇO</a>
                 </div>
             </div>
         </div>
@@ -27,15 +27,16 @@
             <h2 class="accordion-header" id="headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                   <i class="icon-users"></i> Usuários
+                   <i class="icon-users"></i> Funcionários
                 </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            <div id="collapseTwo" class="accordion-collapse collapse <%=active.employees=='active' | active.addMember=='active' ?'show':'' %>" aria-labelledby="headingTwo"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <a href="#">  <i class="icon-home"></i> HOME</a>
-                    <a href="#">  <i class="icon-man"></i> SOBRE</a>
-                    <a href="#">  <i class="icon-briefcase"></i> SERVIÇO</a>
+                    <a href="/admin/members" id="<%=active.employees%>"  >  <i class="icon-list"></i> Listar</a>
+                    <a href="/admin/create/member" id= "<%=active.addMember%>" >  <i class="icon-plus"></i>Cadastrar</a>
+                    <a href="#">  <i class="icon-user"></i>Usuários</a>
+                    
                 </div>
             </div>
         </div>
@@ -49,9 +50,9 @@
             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <a href="#">  <i class="icon-home"></i> HOME</a>
-                    <a href="#">  <i class="icon-man"></i> SOBRE</a>
-                    <a href="#">  <i class="icon-briefcase"></i> SERVIÇO</a>
+                    <a href="#">  <i class="icon-list"></i> Videos</a>
+                    <a href="#"></i> <i class="icon-plus"></i> Cadastrar</a>
+                    
                 </div>
             </div>
         </div>
@@ -65,9 +66,9 @@
             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <a href="#">  <i class="icon-home"></i> HOME</a>
-                    <a href="#">  <i class="icon-man"></i> SOBRE</a>
-                    <a href="#">  <i class="icon-briefcase"></i> SERVIÇO</a>
+                    <a href="#">  <i class="icon-list"></i> Arquivos</a>
+                    <a href="#"></i> <i class="icon-plus"></i> Cadastrar</a>
+                   
                 </div>
             </div>
         </div>
