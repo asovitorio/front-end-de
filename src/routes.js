@@ -3,6 +3,7 @@ const pagesControllers = require('./controllers/pagesControllers')
 const adminControllers = require('./controllers/adminControllers')
 const pagesAdminControllers = require('./controllers/pagesAdminControllers')
 const { auth } = require('./middlewares/auth')
+
 const route = express.Router()
 // ############  Pages ############
 route.get('/',pagesControllers.index)
@@ -27,5 +28,9 @@ route.get('/admin/service', auth, pagesAdminControllers.service)
 
 route.get('/admin/members', auth, pagesAdminControllers.members)
 route.get('/admin/create/member', auth, pagesAdminControllers.createMember)
+
+route.get('/admin/videos', auth, pagesAdminControllers.videos)
+route.get('/admin/create/videos', auth, pagesAdminControllers.formVideos)
+route.post('/admin/create/videos', auth, adminControllers.createVideos)
 
 module.exports = route

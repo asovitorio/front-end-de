@@ -1,0 +1,67 @@
+<%- include('../partials/head-admin.ejs') %>
+
+<main class="admin-main">
+
+    <%- include('../partials/header.ejs') %>
+    <%- include('../partials/aside.ejs') %>
+    <section class="section-adm">
+        <div class="content">
+            <h1><i class="icon-film"></i><span><i class="icon-plus" style="color: aliceblue;"></i></span> <%=title%>
+            </h1>
+            <div class="form-videos">
+                <form action="" method="POST">
+                    <div class="mb-3">
+                        <label for="title-video" class="form-label">Titulo</label>
+                        <input type="text" name="title" class="form-control" id="title-video" placeholder="Digite o titulo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="membro-video" class="form-label">Membros</label>
+                        <input type="text" name="members"  class="form-control" id="membro-video" placeholder="Ex: João | Maria | Pedro">
+                    </div>
+                    <div class="mb-3">
+                        <label for="link-video" class="form-label">Link do Youtube</label>
+                        <input type="text" name="link" class="form-control" id="link-video" placeholder="Ex: WhIfu2Fwi0s">
+                    </div>
+                    <div class="mb-3">
+                        <label for="duration-video" class="form-label">Duração</label>
+                        <input type="number" name="duration" class="form-control" id="duration-video"
+                            placeholder="Digite o tempo em minutos">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
+                        <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="btn-content-save">
+                        <button type="submit" class="btn  btn-save"><i class="icon-cloud-check"></i> Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <%- include('../partials/footer.ejs') %>
+</main>
+
+<script>
+  '<% if(msg){%>'
+toastr["success"]('Episodio', 'Cadastrado com Sucesso')
+toastr.options = {
+    "closeButton": false,
+    "debug": false,
+    "newestOnTop": false,
+    "progressBar": true,
+    "positionClass": "toast-top-full-width",
+    "preventDuplicates": true,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "5000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+}
+
+'<%}%>'
+</script>
+<%- include('../partials/scripts.ejs') %>

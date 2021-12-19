@@ -7,6 +7,7 @@ var logger = require('morgan');
 var cors = require('cors')
 var routes = require('./routes');
 const methodOverride = require('method-override')
+var flash = require('connect-flash');
 var session = require('express-session')
 
 var app = express();
@@ -27,6 +28,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(flash());
 app.use(routes);
 
 

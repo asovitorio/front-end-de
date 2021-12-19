@@ -1,4 +1,5 @@
 const api = require('../api/endpoind')
+const { formatDate } = require('../utils/formatDate')
 const pagesControllers = {
 
     index: async (req,res) => {
@@ -6,9 +7,9 @@ const pagesControllers = {
         return res.render('pages/index',{members})
     },
     videos: async (req,res) => {
-        const {episodes} = await (await api.get('/episodes')).data
-       
-        return res.render('pages/videos',{title:'Videos',icon:'icon-film',episodes,volta:'/#service'})
+        const episodes = await (await api.get('/list-episodes')).data
+     
+        return res.render('pages/videos',{title:'Videos',icon:'icon-film',episodes,volta:'/#service',formatDate})
     },
     podcast: (req,res) => {
         return res.render('pages/podcast',{title:'Podcast',icon:'icon-podcast',volta:'/#service'})

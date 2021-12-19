@@ -47,11 +47,11 @@
                    <i class="icon-film"></i> Videos
                 </button>
             </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            <div id="collapseThree" class="accordion-collapse collapse <%=active.videos=='active'|active.addVideos=='active'?'show':'' %>" aria-labelledby="headingThree"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <a href="#">  <i class="icon-list"></i> Videos</a>
-                    <a href="#"></i> <i class="icon-plus"></i> Cadastrar</a>
+                    <a href="/admin/videos" id="<%=active.videos%>">  <i class="icon-list"></i> Videos</a>
+                    <a href="/admin/create/videos" id="<%=active.addVideos%>"></i> <i class="icon-plus"></i> Cadastrar</a>
                     
                 </div>
             </div>
