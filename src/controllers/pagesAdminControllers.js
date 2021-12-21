@@ -1,6 +1,9 @@
-const { query } = require('express')
+
 const api = require('../api/endpoind')
 const { formatDate } = require('../utils/formatDate')
+async function mapMember(member,config){
+ return await api.get(`/search/user?member_id=${member.id}`,config)?true:false
+}
 const pagesAdminControllers = {
 
     home:async(req,res) =>{
@@ -44,10 +47,20 @@ const pagesAdminControllers = {
            register:''
            
         }
+        const config = {
+         headers: {
+           Authorization: `Bearer ${req.token}`,
+         },
+       };
+       const {data:{members,total,limit}} =  (await api.get(`/members?page=${req.query.page?req.query.page:'1'}`,config))
        
-        return res.render('admin/members/employees',{user,active,title:'Listar'})
+      //  return res.send({members,total,limit})
+       const pagination = Math.ceil(total/limit)
+     
+     
+        return res.render('admin/members/employees',{user,active,title:'Listar',members,total,pagination})
     },
-    createMember:async(req,res) =>{
+    createViewMember:async(req,res) =>{
         const user =  req.user
         const active = {
            home:'',
@@ -74,7 +87,7 @@ const pagesAdminControllers = {
         const {data:{episodes,total,limit}} =  (await api.get(`/episodes?page=${req.query.page?req.query.page:'1'}`))
         
         const pagination = Math.ceil(total/limit)
-        console.log(pagination);
+       
         const episodeMap = episodes.map(episode =>({
            ...episode,
            createdAt:formatDate(episode.createdAt)

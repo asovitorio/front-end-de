@@ -17,6 +17,8 @@ body {
 
 
 }
+
+
 .icon-bin{
     color: rgba(255, 94, 94, 0.876);
 }
@@ -62,6 +64,7 @@ padding: 1px 15px;
 margin: 0px 18px;
 top: -0.6em;
 border-radius: 5px;
+z-index: 100;
 }
 .content h1 span {
     color: #ffffff;
@@ -352,6 +355,89 @@ span {
     background-color: #6ab99173;
 }
 /* ###################################### */
+/* #########INICIO TELA LIST MEMBERS ########### */
+/* ###################################### */
+.content-members{
+overflow-y: auto;
+width: 100%;
+height: 100%;
+}
+.card-list-members {
+    /* background-color: aqua; */
+    display: flex;
+    margin-top: 1rem;
+   /* border-left:10px solid #6ab991 ; */
+   
+    position: relative;
+}
+.image-card-list-members{
+    width:15%;
+    max-width: 20em;
+   
+    position: relative;
+   display: flex;
+   justify-content: center;
+ 
+
+}
+.image-card-list-members img{
+    position: absolute;
+    width: 100%;
+    max-width: 5em;
+    height: 100%;
+    left: 25%;
+    border-radius: 50%;
+   
+   
+}
+.content-card-list-members{
+    width: 100%;
+}
+.personal-data-title{
+    background: linear-gradient(217deg, #6ab99126 , #6ab991 80.71%);
+    border-radius: 5px;   
+    width: 100%;
+    color: white;
+    padding-left: 3px;
+    font-size: 1.5em;
+
+    
+}
+.diviser{
+    width: 100%;
+    height: 0.2rem;
+    background: linear-gradient(217deg, #6ab99126 , #6ab991 80.71%);
+    margin-top: 10px;
+
+}
+.personal-data{
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
+   
+}
+.personal-data  p{
+   
+    display: block;
+    margin: 0;
+}
+.personal-data .info-personal,.contact-data,.info-sistem,.control-member{
+    border-left: 8px solid #6ab991;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5px;
+    margin-right: 1rem;
+    width: 30%;
+   
+}
+.control-member a button{
+    padding: 1px;
+    margin-bottom: 2px;
+    font-size:0.8em;
+    width: 50%;
+}
+/* ###################################### */
 /* #########INICIO TELA FORMULÀRIO VIDEO ########### */
 /* ###################################### */
 
@@ -369,6 +455,30 @@ span {
 .btn-content-save{
 display: flex;
 justify-content: flex-end;
+}
+/* ###################################### */
+/* #########INICIO TELA FORM MEMBER########### */
+/* ###################################### */
+.form-member{
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    
+}
+.form-member form div label{
+  
+    color: #6ab991;
+    padding-right:10px;
+    padding-left:10px;
+    border-radius: 5px;
+}
+.form-member i{
+    color: #6ab991;
+    font-size: 1.5em;
+}
+input[type="date"]::-webkit-calendar-picker-indicator{
+color: #6ab991;
 }
 @media (min-width:740px) {
     /* ###################################### */

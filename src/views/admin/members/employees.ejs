@@ -1,20 +1,62 @@
 <%- include('../partials/head-admin.ejs') %>
 
 <main class="admin-main">
-    
+
     <%- include('../partials/header.ejs') %>
     <%- include('../partials/aside.ejs') %>
     <section class="section-adm">
         <div class="content">
-            <h1><i class="icon-users"></i><span><i class="icon-list" style="color: aliceblue;"></i></span> <%=title%></h1>
+            <h1><i class="icon-users"></i><span><i class="icon-list" style="color: aliceblue;"></i></span> <%=title%>
+            </h1>
+            <div class="content-members">
 
+
+                <% members.map(member =>{%>
+                <div class="card-list-members">
+                    <div class="image-card-list-members">
+                        <img src="<%= member.path %> " alt="">
+                    </div>
+
+                    <div class="content-card-list-members">
+                        <div class="personal-data-title">
+                            <p><%=member.func%> <%=member.name%> - <%=member.rf%> </p>
+                        </div>
+                        <div class="personal-data">
+                            <div class="info-personal">
+                                <p>Nome: <%=member.full_name%></p>
+                                <p>Local:<%=member.location%></p>
+                            </div>
+                            <div class="contact-data">
+                                <p>email:<%=member.email%></p>
+                                <p>celular:<%=member.cellphone%></p>
+                            </div>
+                            <div class="control-member">
+                                <a href="">
+                                    <button type="button" class="btn <%=member.user_id?'btn-success':'btn-danger'%>">
+                                         <i class="icon-user"></i> Usuário <span class="badge bg-light text-dark"><%=member.user_id?'sim':'não'%></span>
+                                      </button>
+                                </a>
+                                <a href="">
+                                    <button type="button" class="btn <%=member.time?'btn-success':'btn-danger'%>">
+                                        <i class="icon-user-tie"></i>   Equipe DE <span class="badge bg-light text-dark"><%=member.time?'sim':'não'%></span>
+                                     </button>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="diviser"></div>
+                <%})%>
+
+            </div>
         </div>
     </section>
-    
+
     <%- include('../partials/footer.ejs') %>
 </main>
 
 <script>
-    
+
 </script>
 <%- include('../partials/scripts.ejs') %>
