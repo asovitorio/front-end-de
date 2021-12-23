@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
 
 const auth = (req, res, next) => {
+  
   const user = jwt.decode(req.session.token);
   const msg = {
     message:

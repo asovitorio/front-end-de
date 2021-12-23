@@ -3,6 +3,7 @@ const pagesControllers = require('./controllers/pagesControllers')
 const adminControllers = require('./controllers/adminControllers')
 const adminMembersController = require('./controllers/adminMemberController')
 const pagesAdminControllers = require('./controllers/pagesAdminControllers')
+const avatar = require("./middlewares/avatar");
 const { auth } = require('./middlewares/auth')
 
 const route = express.Router()
@@ -28,7 +29,7 @@ route.get('/admin/about', auth, pagesAdminControllers.about)
 route.get('/admin/service', auth, pagesAdminControllers.service)
 
 route.get('/admin/members', auth, pagesAdminControllers.members)
-route.post('/admin/members', auth, adminMembersController.create)
+route.post('/admin/members', auth, avatar.single("avatar"), adminMembersController.create)
 route.get('/admin/create/member', auth, pagesAdminControllers.createViewMember)
 
 route.get('/admin/videos', auth, pagesAdminControllers.videos)

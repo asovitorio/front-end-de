@@ -70,8 +70,8 @@ const pagesAdminControllers = {
            addMember:'active'
            
         }
-       
-        return res.render('admin/members/employee-register',{user,active,title:'Cadastro '})
+       const token = req.token
+        return res.render('admin/members/employee-register',{user,active,title:'Cadastro',token,api})
     },
     videos: async(req,res) =>{
         const user =  req.user
