@@ -23,24 +23,31 @@
                         </div>
                         <div class="personal-data">
                             <div class="info-personal">
-                                <p>Nome: <%=member.full_name%></p>
-                                <p>Local:<%=member.location%></p>
+                                <p><span>Nome: </span><%=member.full_name%></p>
+                                <p><span>Local: </span><%=member.location%></p>
                             </div>
                             <div class="contact-data">
-                                <p>email:<%=member.email%></p>
-                                <p>celular:<%=member.cellphone%></p>
+                                <p id="email"><span>email:</span> <%=member.email%></p>
+                                <p><span>celular:</span> <%=member.cellphone%></p>
                             </div>
                             <div class="control-member">
                                 <a href="">
                                     <button type="button" class="btn <%=member.user_id?'btn-success':'btn-danger'%>">
-                                         <i class="icon-user"></i> Usuário <span class="badge bg-light text-dark"><%=member.user_id?'sim':'não'%></span>
-                                      </button>
+                                        <i class="icon-user"></i> Usuário <span class="badge bg-light text-dark"><%=member.user_id?'sim':'não'%></span>
+                                    </button>
                                 </a>
                                 <a href="">
                                     <button type="button" class="btn <%=member.time?'btn-success':'btn-danger'%>">
                                         <i class="icon-user-tie"></i>   Equipe DE <span class="badge bg-light text-dark"><%=member.time?'sim':'não'%></span>
-                                     </button>
+                                    </button>
                                 </a>
+                            </div>
+                            <div class="view-member">
+                              
+                                <a href="/admin/view/member/<%=member.id  %> "><i class="icon-eye"> Visualizar</i> </a>
+                                <a href="/admin/view/member/<%=member.id  %> "><i class="icon-pencil"> Editar</i> </a>
+                                <a href="/admin/view/member/<%=member.id  %> "><i class="icon-bin"> Apagar</i> </a>
+                                
                             </div>
 
                         </div>

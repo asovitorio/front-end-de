@@ -1007,7 +1007,7 @@ large device: 992
   width: 100%;
   margin-top: 200px;
   height: 100vh;
-  
+
   padding: 0 10px;
 }
 
@@ -1020,16 +1020,18 @@ large device: 992
 .content-video .video .descriptyon-video {
   padding: 20px;
   width: 100%;
- 
+
 }
-.content-video .video .descriptyon-video h1{
+
+.content-video .video .descriptyon-video h1 {
   font-size: 3rem;
   color: #56af83;
 }
-.content-video .video .descriptyon-video span{
+
+.content-video .video .descriptyon-video span {
   background: linear-gradient(-270deg,
-  hsla(var(--hue), 36%, 57%, 1) 0%,
-  hsla(var(--hue), 65%, 88%, 0.34)100%);
+      hsla(var(--hue), 36%, 57%, 1) 0%,
+      hsla(var(--hue), 65%, 88%, 0.34)100%);
   color: #fff;
   width: 100%;
   padding: 5px;
@@ -1037,13 +1039,17 @@ large device: 992
   font-size: 1.5em;
   border-radius: 6px;
 }
-.content-video .video .descriptyon-video p{
-margin-top: 1em;
+
+.content-video .video .descriptyon-video p {
+  margin-top: 1em;
   font-size: 2em;
   line-height: 1.5em;
-  text-align: justify ;
+  text-align: justify;
   font-weight: 500;
+  height: 37vh;
+  overflow: auto;
 }
+
 /* ##########  FIM VIEW-VIDEO ########## */
 
 
@@ -1290,23 +1296,35 @@ margin-top: 1em;
   /* ############# FIM TELA LOGIN ############# */
 
   /* ############## iNICIO VIEW VIDEO DESCK-TOP ############ */
-  
-  .content-video .video{
+
+  .content-video .video {
     display: flex;
     flex-wrap: nowrap;
     margin-top: 300px;
   }
-  .content-video .video iframe{
+
+  .content-video .video iframe {
     box-shadow: -211px -87px 2px #56af83;
     height: 64vh;
   }
-  .content-video .video .descriptyon-video h1{
+
+  .content-video .video .descriptyon-video h1 {
     font-size: 2rem;
   }
-  .content-video .video .descriptyon-video{
-    width: 70%;
+
+  .content-video .video .descriptyon-video {
+    height: 20px;
     font-size: 0.7rem;
   }
-  
+
+  .content-video .video .descriptyon-video .descriptyon-video-text {
+   
+    height: 30rem;
+    width: 100%;
+   
+  }
+  .content-video .video .descriptyon-video p{
+    height:100%;
+  }
   /* ############## FIM VIEW VIDEO ############ */
 }

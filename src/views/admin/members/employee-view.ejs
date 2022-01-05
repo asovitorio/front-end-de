@@ -1,0 +1,67 @@
+<%- include('../partials/head-admin.ejs') %>
+
+<main class="admin-main">
+
+  <%- include('../partials/header.ejs') %>
+  <%- include('../partials/aside.ejs') %>
+  <section class="section-adm">
+    <div class="content">
+      <h1><i class="icon-user"></i> <%=title%></h1>
+
+      <div class="date-personal-view">
+        <div class="image-avatar-view">
+          <img src="<%=member.file.path%>" alt="<%=member.full_name%>">
+        </div>
+        <div class="name-member-view">
+          <h2><%=member.name%> - <%=member.rf.replace(/(\d{3})(\d{3})(\d{1})/, "$1.$2-$3")%></h2>
+        </div>
+        <div class="date-personal-views">
+          <p type="button" class="">
+            Nome: <span class="badge text-dark"><%=member.full_name%></span>
+          </p>
+          <p type="button" class="">
+            nasc.: <span class="badge text-dark"><%=member.birth%></span>
+          </p>
+          <p type="button" class="">
+            Função: <span class="badge text-dark"><%=member.func%></span>
+          </p>
+          <p type="button" class="">
+            Email: <span class="badge text-dark"><%=member.email%></span>
+          </p>
+          <p type="button" class="">
+            Celular: <span class="badge text-dark"><%=member.cellphone%></span>
+          </p>
+          <p type="button" class="">
+            Descrição: <span class="badge text-dark"><%=member.description%></span>
+          </p>
+          <p type="button" class="">
+            Membro DE: <span
+              class="badge <%=member.time?'bg-success':'bg-danger'%> text-ligth"><%=member.time?'Sim':'não'%></span>
+          </p>
+          <p type="button" class="">
+            Usuário:
+            <% if(member.user){%>
+            <span
+              class="badge <%=member.user.status?'bg-success':'bg-warning'%> text-ligth"><%=member.user.status?'Admnistrador':'Padrão'%></span>
+
+            <%}else{%>
+            <span class="badge bg-danger text-ligth">Não</span>
+            <%}%>  
+          
+          </span>
+        </p>
+    </div>
+      </div>
+    
+        
+</div>
+        </div>
+    </section>
+
+    <%- include('../partials/footer.ejs') %>
+</main>
+
+<script>
+
+</script>
+<%- include('../partials/scripts.ejs') %>
