@@ -1107,7 +1107,15 @@ large device: 992
 
   }
 
-  /* ====SERVICES==== */
+  /* About */
+  /* #about {
+    overflow: auto;
+  } */
+.container-2 .image img{
+  max-height: 600px;
+  
+}
+    /* ====SERVICES==== */
   #service {
     height: 100vh;
     overflow-y: hidden;
@@ -1318,13 +1326,15 @@ large device: 992
   }
 
   .content-video .video .descriptyon-video .descriptyon-video-text {
-   
+
     height: 30rem;
     width: 100%;
-   
+
   }
-  .content-video .video .descriptyon-video p{
-    height:100%;
+
+  .content-video .video .descriptyon-video p {
+    height: 100%;
   }
+
   /* ############## FIM VIEW VIDEO ############ */
 }

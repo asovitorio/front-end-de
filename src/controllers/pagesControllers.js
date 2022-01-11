@@ -3,8 +3,17 @@ const { formatDate } = require('../utils/formatDate')
 const pagesControllers = {
 
     index: async (req,res) => {
-        const {data:members} = await (await api.get('/my-time'))
-        return res.render('pages/index',{members})
+        try {
+            const {data:members} =  (await api.get('/my-time'))
+            const {data:home} =  (await api.get('/home'))
+            const {data:about} =(await api.get('/about'))
+          
+            return res.render('pages/index',{members,home,about})
+            
+        } catch (error) {
+          
+            return res.send('Erro => ' + error.message)
+        }
     },
     videos: async (req,res) => {
         const episodes = await (await api.get('/list-episodes')).data

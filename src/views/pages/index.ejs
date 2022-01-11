@@ -1,4 +1,3 @@
-
 <%- include('../partials/head') %>
 <%- include('../partials/header.ejs') %>
 <main>
@@ -7,14 +6,12 @@
   <section class="section" id="home">
     <div class="container-2 grid">
       <div class="image">
-        <img src="/images/assets/rodney.jpg" alt="Diretor na sala da DE com as fotos de todos os diretores.">
+        <img src="<%=home[0].file.path%>" alt="Diretor na sala da DE com as fotos de todos os diretores.">
       </div>
       <div class="text">
-        <h1 class="title"><i>Diretoria de Representação</i> </h1>
-        <h3>Trabalho e Transparência</h3>
-
+        <h1 class="title"><i><%=home[0].title%></i> </h1>
+        <h3><%=home[0].sub_title%></h3>
       </div>
-
     </div>
   </section>
 
@@ -23,23 +20,13 @@
   <section class="section" id="about">
     <div class="container-2 grid">
       <div class="image">
-        <img src="/images/assets/rodeneyAbout.jpg" alt="Diretor de Representação Rodney Caeteano">
+        <img src="<%=about[0].file.path%>" alt="Diretor de Representação Rodney Caeteano">
       </div>
       <div class="container">
-        <h2 class="title-2">Sobre</h2>
+        <h2 class="title-2"><%=about[0].title%></h2>
         <div class="text">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat officiis error ea, pariatur esse veniam
-            dolore ad consequatur, fugit nemo fugiat possimus animi est! Consequuntur animi laboriosam aspernatur amet
-            impedit!</p>
+          <p><%=about[0].description%></p>
           <br>
-          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, recusandae. Accusantium aliquid eius,
-              placeat dicta dignissimos animi vel debitis dolorum ipsa, incidunt dolorem pariatur illo maxime ex
-              necessitatibus, tenetur ipsum?</p>
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit totam dolor iste expedita quo, amet
-              deleniti ipsam consequatur quasi dolorum est ea adipisci illum assumenda accusamus ducimus ab saepe.</p>
-          </div> -->
-
         </div>
 
       </div>
@@ -238,7 +225,7 @@
           </div>
         </div>
         <%})%>
-     
+
         <!-- aqui fim divisão -->
 
       </div>
@@ -252,4 +239,3 @@
 </main>
 <%- include('../partials/footer.ejs') %>
 <%- include('../partials/scripts.ejs') %>
-

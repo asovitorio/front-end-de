@@ -13,7 +13,10 @@ const pagesAdminControllers = {
       about: "",
       servico: "",
     };
-    return res.render("admin/site/home", { user, active, title: "home" });
+    const {data:home} = await api.get('/home')
+   
+    const token = req.token;
+    return res.render("admin/site/home", { user, active, title: "home" ,token,home});
   },
   about: async (req, res) => {
     const user = req.user;
@@ -22,7 +25,9 @@ const pagesAdminControllers = {
       about: "active",
       servico: "",
     };
-    return res.render("admin/site/about", { user, active, title: "Sobre" });
+    const token = req.token;
+    const {data:about} = await api.get('/about')
+    return res.render("admin/site/about", { user, active, title:about[0].title,about,token });
   },
   service: async (req, res) => {
     const user = req.user;
