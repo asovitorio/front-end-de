@@ -19,7 +19,7 @@
                 <div class="accordion-body">
                     <a href="/admin/home" id="<%=active.home%>">  <i class="icon-home"></i> HOME</a>
                     <a href="/admin/about" id="<%=active.about%>">  <i class="icon-man"></i> SOBRE</a>
-                    <a href="/admin/service"id="<%=active.service%>">  <i class="icon-briefcase"></i> SERVIÇO</a>
+                    <a href="/admin/event"id="<%=active.service%>">  <i class="icon-images"></i> Evento</a>
                 </div>
             </div>
         </div>
@@ -63,12 +63,11 @@
                    <i class="icon-file-pdf"></i> Informátivos
                 </button>
             </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+            <div id="collapseFour" class="accordion-collapse collapse  <%=active.informative=='active'| active.addInformative=='active' ?'show':'' %>" aria-labelledby="headingFour"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <a href="#">  <i class="icon-list"></i> Arquivos</a>
-                    <a href="#"></i> <i class="icon-plus"></i> Cadastrar</a>
-                   
+                    <a href="/admin/list-informatives" id="<%=active.informative%>" >  <i class="icon-list"></i> Arquivos</a>
+                    <a href="/admin/form-informatives" id="<%=active.addInformative%>" ></i> <i class="icon-plus"></i> Cadastrar</a>
                 </div>
             </div>
         </div>

@@ -149,7 +149,7 @@
                 "Content-Type": `multipart/form-data; boundary=${formData._boundary}`,
             },
         };
-        const resposta = await axios.post('http://localhost:3000/de/api/v1/members', formData, config)
+        const resposta = await axios.post('<%=url%>/members', formData, config)
         console.log(resposta.data);
         if (resposta) {
             toastr["success"]('Funcionário', 'Cadastrado com Sucesso')

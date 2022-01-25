@@ -84,31 +84,19 @@
   <section class="section" id="events">
     <div class="container">
       <div class="context-header">
-        <h2 class="title-2">Eventos</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio eaque nam explicabo ipsam officia quas
-          aliquam quos quis obcaecati, porro animi consequuntur ullam harum praesentium vel consectetur! Architecto,
-          nam error!
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse quaerat cum nesciunt sed recusandae natus
-          iste earum, libero maiores sequi deserunt animi quidem, error aperiam optio, commodi sunt? Dolorum, tempora.
-        </p>
-
+        <h2 class="title-2"><%=event[0].title  %> </h2>
+        <p><%=event[0].description%> </p>
       </div>
-
-
       <header>
-
-
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="/images/assets/motos.jpg" height="10rem" class="d-block w-100" alt="...">
+            <% event[0].files.forEach((image,index) =>{%>
+
+            <div class="carousel-item <%=index==0? 'active':''%>">
+              <img src="<%=image.path%>" height="10rem" class="d-block w-100" alt="<%=image.file_name%>">
             </div>
-            <div class="carousel-item">
-              <img src="/images/assets/niver.jpg" height="10rem" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="/images/assets/natal.jpg" height="10rem" class="d-block w-100" alt="...">
-            </div>
+            <%})%>
+           
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
             data-bs-slide="prev">

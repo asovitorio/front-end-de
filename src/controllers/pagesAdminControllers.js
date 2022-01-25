@@ -1,5 +1,7 @@
 const api = require("../api/endpoind");
 const { formatDate } = require("../utils/formatDate");
+require('dotenv').config()
+const url = process.env.END_POINT
 async function mapMember(member, config) {
   return (await api.get(`/search/user?member_id=${member.id}`, config))
     ? true
@@ -16,7 +18,7 @@ const pagesAdminControllers = {
     const {data:home} = await api.get('/home')
    
     const token = req.token;
-    return res.render("admin/site/home", { user, active, title: "home" ,token,home});
+    return res.render("admin/site/home", { user, active, title: "home" ,token,home,url});
   },
   about: async (req, res) => {
     const user = req.user;
@@ -27,9 +29,9 @@ const pagesAdminControllers = {
     };
     const token = req.token;
     const {data:about} = await api.get('/about')
-    return res.render("admin/site/about", { user, active, title:about[0].title,about,token });
+    return res.render("admin/site/about", { user, active, title:about[0].title,about,token,url });
   },
-  service: async (req, res) => {
+  event: async (req, res) => {
     const user = req.user;
     const active = {
       home: "",
@@ -38,8 +40,9 @@ const pagesAdminControllers = {
       employees: "",
       register: "",
     };
-
-    return res.render("admin/site/service", { user, active, title: "Service" });
+    const token = req.token
+    const {data:event} = await api.get('/event')
+    return res.render("admin/site/event", { user, active, title: "Evento",url,event,token});
   },
   members: async (req, res) => {
     const user = req.user;
@@ -82,6 +85,7 @@ const pagesAdminControllers = {
       service: "",
       employees: "",
       addMember: "active",
+      informative:""
     };
     const token = req.token;
     return res.render("admin/members/employee-register", {
@@ -90,6 +94,7 @@ const pagesAdminControllers = {
       title: "Cadastro",
       token,
       api,
+      url
     });
   },
   videos: async (req, res) => {
@@ -101,6 +106,7 @@ const pagesAdminControllers = {
       employees: "",
       addMember: "",
       videos: "active",
+      informative:""
     };
     const {
       data: { episodes, total, limit },
@@ -121,6 +127,56 @@ const pagesAdminControllers = {
       title: "Listar",
       episodeMap,
       pagination,
+      url
+    });
+  },
+  informatives: async (req, res) => {
+    const user = req.user;
+    const active = {
+      home: "",
+      about: "",
+      service: "",
+      employees: "",
+      addMember: "",
+      videos: "",
+      informative:"active"
+    };
+  
+    const {data:informatives} = await api.get('/informatives')
+    console.log(informatives);
+    return res.render("admin/informatives/list-informatives", {
+      user,
+      active,
+      title: "Listar",
+      informatives,
+      formatDate,
+      url
+    });
+  },
+  formInformatives: async (req, res) => {
+    const user = req.user;
+    const token = req.token;
+    const active = {
+      home: "",
+      about: "",
+      service: "",
+      employees: "",
+      addMember: "",
+      videos: "",
+      addVideos: "",
+      informative:"",
+      addInformative: "active",
+    };
+    let [msg] = req.flash("informative-create");
+    if (!msg) msg = false;
+    console.log(url);
+    return res.render("admin/informatives/create-informatives", {
+      user,
+      active,
+      title: "Cadastro",
+      msg,
+      token,
+      url
     });
   },
   formVideos: async (req, res) => {
@@ -133,6 +189,7 @@ const pagesAdminControllers = {
       addMember: "",
       videos: "",
       addVideos: "active",
+      informative:""
     };
     let [msg] = req.flash("video-create");
     if (!msg) msg = false;
@@ -142,6 +199,7 @@ const pagesAdminControllers = {
       active,
       title: "Cadastro",
       msg,
+      url
     });
   },
   pageViewMember: async (req, res) => {
@@ -154,6 +212,7 @@ const pagesAdminControllers = {
       addMember: "",
       videos: "",
       addVideos: "",
+      informative:""
     };
     const config = {
       headers: {
@@ -166,18 +225,15 @@ const pagesAdminControllers = {
       `/members/${req.params.id}`,
       config
     );
-  //  const member = {
-  //    ...data.member,
-    
-  //  }
-      
+     
     return res.render("admin/members/employee-view", {
       user,
       active,
       title: "Perfil",
-      member
+      member,
+      url,
+      formatDate
     });
-    // return res.render('admin/videos/register-video',{user,active,title:'Cadastro',})
   },
   logout: (req, res) => {
     req.session.destroy((err) => {

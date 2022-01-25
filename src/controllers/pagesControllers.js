@@ -7,8 +7,10 @@ const pagesControllers = {
             const {data:members} =  (await api.get('/my-time'))
             const {data:home} =  (await api.get('/home'))
             const {data:about} =(await api.get('/about'))
+            const {data:event} =(await api.get('/event'))
+            console.log(event);
           
-            return res.render('pages/index',{members,home,about})
+            return res.render('pages/index',{members,home,about,event})
             
         } catch (error) {
           
@@ -23,8 +25,10 @@ const pagesControllers = {
     podcast: (req,res) => {
         return res.render('pages/podcast',{title:'Podcast',icon:'icon-podcast',volta:'/#service'})
     },
-    informativos: (req,res) => {
-        return res.render('pages/informativos',{title:'Informativos',icon:'icon-file-pdf',volta:'/#service'})
+    informativos:async (req,res) => {
+        const informatives = (await api.get('/informatives')).data
+        
+        return res.render('pages/informativos',{title:'Informativos',icon:'icon-file-pdf',volta:'/#service',informatives,formatDate})
     },
     galeria: (req,res) => {
         return res.render('pages/galeria',{title:'Galeria',icon:'icon-images',volta:'/#service'})

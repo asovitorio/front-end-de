@@ -27,7 +27,7 @@ route.get('/admin/logout', auth, pagesAdminControllers.logout)
 
 route.get('/admin/home', auth, pagesAdminControllers.home)
 route.get('/admin/about', auth, pagesAdminControllers.about)
-route.get('/admin/service', auth, pagesAdminControllers.service)
+route.get('/admin/event', auth, pagesAdminControllers.event)
 
 
 
@@ -42,5 +42,9 @@ route.post('/admin/members', auth, avatar.single("avatar"), adminMembersControll
 route.get('/admin/videos', auth, pagesAdminControllers.videos)
 route.get('/admin/create/videos', auth, pagesAdminControllers.formVideos)
 route.post('/admin/create/videos', auth, adminControllers.createVideos)
+
+
+route.get('/admin/list-informatives', auth, pagesAdminControllers.informatives)
+route.get('/admin/form-informatives', auth, pagesAdminControllers.formInformatives)
 
 module.exports = route
