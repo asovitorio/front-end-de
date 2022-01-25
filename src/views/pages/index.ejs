@@ -84,16 +84,16 @@
   <section class="section" id="events">
     <div class="container">
       <div class="context-header">
-        <h2 class="title-2"><%=event[0].title  %> </h2>
-        <p><%=event[0].description%> </p>
+        <h2 class="title-2"><%=//event[0].title  %> </h2>
+        <p><%=//event[0].description%> </p>
       </div>
       <header>
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <% event[0].files.forEach((image,index) =>{%>
+            <% //event[0].files.forEach((image,index) =>{%>
 
             <div class="carousel-item <%=index==0? 'active':''%>">
-              <img src="<%=image.path%>" height="10rem" class="d-block w-100" alt="<%=image.file_name%>">
+              <img src="<%=//image.path%>" height="10rem" class="d-block w-100" alt="<%=//image.file_name%>">
             </div>
             <%})%>
            
