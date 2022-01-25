@@ -9,7 +9,9 @@
             <h1><i class="icon-images"></i> <%=title%></h1>
             <div class="form-videos">
                 <form action="" method="POST" id="form-event" enctype="multipart/form-data">
-                    <input type="hidden" name="id" value="<%=event[0].id%> ">
+                    <% if(event.length > 0){%>
+                        <input type="hidden" name="id" value="<%=event[0].id%> ">
+                        <% }%>
                     <div class="mb-3">
                         <label for="title-about" class="form-label">Titulo</label>
                         <input type="text" name="title" value="" class="form-control" id="title-about"
@@ -18,7 +20,8 @@
 
                     <div class="mb-3">
                         <label for="image-about" class="form-label">Image - 'escolha até 5 imagens'</label>
-                        <input class="form-control" type="file" name="carousel" multiple id="image-event" accept="image/*">
+                        <input class="form-control" type="file" name="carousel" multiple id="image-event"
+                            accept="image/*">
                     </div>
 
                     <div class="mb-3">
@@ -38,29 +41,29 @@
 </main>
 
 <script>
-  const formEvent = document.querySelector('#form-event')
-     const id = document.querySelector("input[name='id'")
-     const title = document.querySelector("input[name='title'")
-     const description = document.querySelector("textarea[name='description']")
-     const imageEvent = document.querySelector("input[name='carousel']")
+    const formEvent = document.querySelector('#form-event')
+    const id = document.querySelector("input[name='id'")
+    const title = document.querySelector("input[name='title'")
+    const description = document.querySelector("textarea[name='description']")
+    const imageEvent = document.querySelector("input[name='carousel']")
 
-     formEvent.addEventListener("submit", async (e) =>{
-         e.preventDefault()
-         const formData = new FormData();
-         formData.append('id',id.value)
-         formData.append('title',title.value)
-         formData.append('description',description.value)
-         formData.append('carousel', imageEvent.files)
-         console.log(formData.get('carousel'));
-         const config = {
+    formEvent.addEventListener("submit", async (e) => {
+        e.preventDefault()
+        const formData = new FormData();
+        formData.append('id', id.value)
+        formData.append('title', title.value)
+        formData.append('description', description.value)
+        formData.append('carousel', imageEvent.files)
+        console.log(formData.get('carousel'));
+        const config = {
             headers: {
                 Authorization: `Bearer <%=token%>`,
                 "Content-Type": `multipart/form-data; boundary=${formData._boundary}`,
             },
         };
-      
-        const resposta = await axios.put('<%=url%>/event',formData, config)
-            console.log(resposta);
+
+        const resposta = await axios.put('<%=url%>/event', formData, config)
+        console.log(resposta);
         if (resposta) {
             toastr["success"]('Evento', 'Atualizada com Sucesso')
             toastr.options = {
@@ -82,7 +85,7 @@
             }
 
             formAbout.reset()
-          
+
         }
     })
 </script>

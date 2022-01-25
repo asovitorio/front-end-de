@@ -29,7 +29,7 @@ const pagesAdminControllers = {
     };
     const token = req.token;
     const {data:about} = await api.get('/about')
-    return res.render("admin/site/about", { user, active, title:about[0].title,about,token,url });
+    return res.render("admin/site/about", { user, active, title:about[0].title,about,token,url});
   },
   event: async (req, res) => {
     const user = req.user;

@@ -58,7 +58,7 @@
                 "Content-Type": `multipart/form-data; boundary=${formData._boundary}`,
             },
         };
-        console.log('<%=url%>');
+     
          const resposta = await axios.post("<%=url%>/informatives",formData, config)
             console.log(resposta);
         if (resposta) {

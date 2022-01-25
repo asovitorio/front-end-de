@@ -59,7 +59,7 @@
             },
         };
       
-        const resposta = await axios.put('http://localhost:3000/de/api/v1/about',formData, config)
+        const resposta = await axios.put("<%=url%>/about",formData, config)
             console.log(resposta);
         if (resposta) {
             toastr["success"]('Home', 'Atualizada com Sucesso')

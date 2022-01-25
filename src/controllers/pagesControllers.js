@@ -3,12 +3,13 @@ const { formatDate } = require('../utils/formatDate')
 const pagesControllers = {
 
     index: async (req,res) => {
+       
         try {
             const {data:members} =  (await api.get('/my-time'))
-            const {data:home} =  (await api.get('/home'))
             const {data:about} =(await api.get('/about'))
-            const {data:event} =(await api.get('/event'))
-            console.log(event);
+            const {data:home} =  (await api.get('/home'))
+         const {data:event} =(await api.get('/event'))
+
           
             return res.render('pages/index',{members,home,about,event})
             
