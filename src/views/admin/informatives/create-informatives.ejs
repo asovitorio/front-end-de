@@ -60,7 +60,7 @@
         };
      
          const resposta = await axios.post("<%=url%>/informatives",formData, config)
-            console.log(resposta);
+          
         if (resposta) {
             toastr["success"]('Arquivo', 'Salvo com Sucesso')
             toastr.options = {
