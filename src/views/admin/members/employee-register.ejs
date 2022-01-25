@@ -74,7 +74,7 @@
                         <label for="validationDefault04" class="form-label">Gerência</label>
                         <select class="form-select" name="location" id="location">
                             <option selected disabled value="">Escolha...</option>
-                            <option value="RSUL">RSU</option>
+                            <option value="RSU">RSU</option>
                             <option value="RLE">RLE</option>
                             <option value="RNO">RNO</option>
                             <option value="ROE">ROE</option>
@@ -149,8 +149,8 @@
                 "Content-Type": `multipart/form-data; boundary=${formData._boundary}`,
             },
         };
-        const resposta = await axios.post('http://localhost:3000/de/api/v1/members', formData, config)
-
+        const resposta = await axios.post('<%=url%>/members', formData, config)
+        console.log(resposta.data);
         if (resposta) {
             toastr["success"]('Funcionário', 'Cadastrado com Sucesso')
             toastr.options = {
@@ -172,7 +172,9 @@
             }
             formMembers.reset()
         }
-        console.log(resposta.data);
+
+       
+       
 
     })
 </script>

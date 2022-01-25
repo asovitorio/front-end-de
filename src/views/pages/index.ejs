@@ -1,4 +1,3 @@
-
 <%- include('../partials/head') %>
 <%- include('../partials/header.ejs') %>
 <main>
@@ -7,14 +6,12 @@
   <section class="section" id="home">
     <div class="container-2 grid">
       <div class="image">
-        <img src="/images/assets/rodney.jpg" alt="Diretor na sala da DE com as fotos de todos os diretores.">
+        <img src="<%=home[0].file.path%>" alt="Diretor na sala da DE com as fotos de todos os diretores.">
       </div>
       <div class="text">
-        <h1 class="title"><i>Diretoria de Representação</i> </h1>
-        <h3>Trabalho e Transparência</h3>
-
+        <h1 class="title"><i><%=home[0].title%></i> </h1>
+        <h3><%=home[0].sub_title%></h3>
       </div>
-
     </div>
   </section>
 
@@ -23,23 +20,13 @@
   <section class="section" id="about">
     <div class="container-2 grid">
       <div class="image">
-        <img src="/images/assets/rodeneyAbout.jpg" alt="Diretor de Representação Rodney Caeteano">
+        <img src="<%=about[0].file.path%>" alt="Diretor de Representação Rodney Caeteano">
       </div>
       <div class="container">
-        <h2 class="title-2">Sobre</h2>
+        <h2 class="title-2"><%=about[0].title%></h2>
         <div class="text">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat officiis error ea, pariatur esse veniam
-            dolore ad consequatur, fugit nemo fugiat possimus animi est! Consequuntur animi laboriosam aspernatur amet
-            impedit!</p>
+          <p><%=about[0].description%></p>
           <br>
-          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, recusandae. Accusantium aliquid eius,
-              placeat dicta dignissimos animi vel debitis dolorum ipsa, incidunt dolorem pariatur illo maxime ex
-              necessitatibus, tenetur ipsum?</p>
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit totam dolor iste expedita quo, amet
-              deleniti ipsam consequatur quasi dolorum est ea adipisci illum assumenda accusamus ducimus ab saepe.</p>
-          </div> -->
-
         </div>
 
       </div>
@@ -97,31 +84,19 @@
   <section class="section" id="events">
     <div class="container">
       <div class="context-header">
-        <h2 class="title-2">Eventos</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio eaque nam explicabo ipsam officia quas
-          aliquam quos quis obcaecati, porro animi consequuntur ullam harum praesentium vel consectetur! Architecto,
-          nam error!
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse quaerat cum nesciunt sed recusandae natus
-          iste earum, libero maiores sequi deserunt animi quidem, error aperiam optio, commodi sunt? Dolorum, tempora.
-        </p>
-
+        <h2 class="title-2"><%=event[0].title  %> </h2>
+        <p><%=event[0].description%> </p>
       </div>
-
-
       <header>
-
-
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="/images/assets/motos.jpg" height="10rem" class="d-block w-100" alt="...">
+            <% event[0].files.forEach((image,index) =>{%>
+
+            <div class="carousel-item <%=index==0? 'active':''%>">
+              <img src="<%=image.path%>" height="10rem" class="d-block w-100" alt="<%=image.file_name%>">
             </div>
-            <div class="carousel-item">
-              <img src="/images/assets/niver.jpg" height="10rem" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="/images/assets/natal.jpg" height="10rem" class="d-block w-100" alt="...">
-            </div>
+            <%})%>
+           
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
             data-bs-slide="prev">
@@ -238,7 +213,7 @@
           </div>
         </div>
         <%})%>
-     
+
         <!-- aqui fim divisão -->
 
       </div>
@@ -252,4 +227,3 @@
 </main>
 <%- include('../partials/footer.ejs') %>
 <%- include('../partials/scripts.ejs') %>
-

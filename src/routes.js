@@ -3,6 +3,7 @@ const pagesControllers = require('./controllers/pagesControllers')
 const adminControllers = require('./controllers/adminControllers')
 const adminMembersController = require('./controllers/adminMemberController')
 const pagesAdminControllers = require('./controllers/pagesAdminControllers')
+const pageViewMember = require('./controllers/pagesAdminControllers')
 const avatar = require("./middlewares/avatar");
 const { auth } = require('./middlewares/auth')
 
@@ -26,14 +27,24 @@ route.get('/admin/logout', auth, pagesAdminControllers.logout)
 
 route.get('/admin/home', auth, pagesAdminControllers.home)
 route.get('/admin/about', auth, pagesAdminControllers.about)
-route.get('/admin/service', auth, pagesAdminControllers.service)
+route.get('/admin/event', auth, pagesAdminControllers.event)
+
+
 
 route.get('/admin/members', auth, pagesAdminControllers.members)
-route.post('/admin/members', auth, avatar.single("avatar"), adminMembersController.create)
 route.get('/admin/create/member', auth, pagesAdminControllers.createViewMember)
+route.get('/admin/view/member/:id', auth, pagesAdminControllers.pageViewMember)
+
+
+
+route.post('/admin/members', auth, avatar.single("avatar"), adminMembersController.create)
 
 route.get('/admin/videos', auth, pagesAdminControllers.videos)
 route.get('/admin/create/videos', auth, pagesAdminControllers.formVideos)
 route.post('/admin/create/videos', auth, adminControllers.createVideos)
+
+
+route.get('/admin/list-informatives', auth, pagesAdminControllers.informatives)
+route.get('/admin/form-informatives', auth, pagesAdminControllers.formInformatives)
 
 module.exports = route

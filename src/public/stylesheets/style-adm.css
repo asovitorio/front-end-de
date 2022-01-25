@@ -1,17 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-:root{
+
+:root {
     --bs-teal: #6ab9919a;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
 
-img{
+img {
     position: relative;
 }
+
 body {
     font-family: 'Roboto', cursive, sans-serif;
 
@@ -19,70 +22,79 @@ body {
 }
 
 
-.icon-bin{
+.icon-bin {
     color: rgba(255, 94, 94, 0.876);
 }
-.icon-pencil{
+
+.icon-pencil {
     color: rgba(81, 81, 192, 0.794);
-  
+
 
 }
-.btn-save{
+
+.btn-save {
     background-color: #6ab991;
     color: #fff;
     transition: all 0.4s linear;
     margin-right: 1em;
     margin-bottom: 1em;
 }
-.btn-save:hover{
+
+.btn-save:hover {
     background-color: #579b79;
     color: #fff;
 }
+
 /* ############ Estilo do adm main ############*/
 .section-adm {
     position: relative;
     grid-area: section;
     background-color: #ece6e6;
     padding: 1.3rem;
-  
+
 }
-.content{
-    border:3px solid #6ab9919f;
+
+.content {
+    border: 3px solid #6ab9919f;
     border-radius: 6px;
     width: 100%;
     height: 100%;
     position: relative;
     /* box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.26); */
     margin-top: 10px;
-    padding:1rem;
+    padding: 1rem;
 }
-.content h1{
-color: #fff;
-background-color: #6ab991;
-position: absolute;
-padding: 1px 15px;
-margin: 0px 18px;
-top: -0.6em;
-border-radius: 5px;
-z-index: 100;
+
+.content h1 {
+    color: #fff;
+    background-color: #6ab991;
+    position: absolute;
+    padding: 1px 15px;
+    margin: 0px 18px;
+    top: -0.6em;
+    border-radius: 5px;
 }
+
 .content h1 span {
     color: #ffffff;
     padding: 2px;
-font-size: 0.3em;
-/* border-radius: 50%; */
-border:  2px solid #fff ;
-margin: 0;
+    font-size: 0.3em;
+    /* border-radius: 50%; */
+    border: 2px solid #fff;
+    margin: 0;
 
 }
-.pagination-video{
+
+.pagination-video {
     position: absolute;
     right: 15px;
     bottom: 0;
 }
-.content table tbody tr{
-  width: 110px;
+
+.content table tbody tr {
+    width: 110px;
 }
+
 /* ###################################### */
 /* #########INICIO TELA ASIDE ########### */
 /* ###################################### */
@@ -98,9 +110,9 @@ margin: 0;
 
 .logo-admin {
     grid-area: logo;
-    background-color:#faebd7;
-   
-    z-index:200
+    background-color: #faebd7;
+
+    z-index: 200
 }
 
 #logo-img-admin {
@@ -126,8 +138,8 @@ margin: 0;
     padding: 5px 0px;
     justify-content: space-around;
     align-items: center;
-    z-index:100;
-    background-color:#faebd7;
+    z-index: 100;
+    background-color: #faebd7;
     border-bottom: solid 3px #6ab9919a;
 }
 
@@ -135,19 +147,22 @@ margin: 0;
 
     font-size: 1.2rem;
     color: #6ab991;
-    
+
 }
-.nav-admin div a i{
+
+.nav-admin div a i {
     font-size: 1.5rem;
     color: #6ab991;
     border: 1px solid #6ab991;
     border-radius: 3px;
     transition: all 0.4s linear;
 }
-.nav-admin div a i:hover{
+
+.nav-admin div a i:hover {
     background-color: #6ab9914f;
 
 }
+
 .logo-admin img {
     width: 50px;
     display: block;
@@ -158,7 +173,7 @@ margin: 0;
 .aside-admin {
     grid-area: aside;
     position: fixed;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.452);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.452);
     transition: all 0.5s linear;
     top: 0;
     left: 0;
@@ -173,10 +188,11 @@ margin: 0;
 .show-aside-admin {
     transform: translateX(0);
     transition: all 0.5s linear;
-    
-    
+
+
 }
-#active{
+
+#active {
     color: #ff0000a8;
     border-right: 8px solid #ff0000a8;
 }
@@ -184,31 +200,35 @@ margin: 0;
 
 .footer {
     grid-area: footer;
-  
-    
-    
+
+
+
 }
-.admin-avatar{
+
+.admin-avatar {
     padding: 10px;
     margin-top: 65px;
     margin-bottom: 0px;
     width: 100%;
-   /* height: 35vh; */
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   background-color: white;
-   
-   /* background: repeating-radial-gradient(#6ab991, #6ab9917a 20%); */
+    /* height: 35vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+
+    /* background: repeating-radial-gradient(#6ab991, #6ab9917a 20%); */
 }
-.admin-avatar img{
+
+.admin-avatar img {
     position: relative;
     border: 2px solid #6ab991;
     border-radius: 50%;
+    max-height: 130px;
 }
-.admin-avatar span{
+
+.admin-avatar span {
     background-color: #6ab991;
-    padding:0px;
+    padding: 0px;
     width: 50%;
     color: #ffffff;
     text-align: center;
@@ -217,32 +237,37 @@ margin: 0;
     border-radius: 20px;
     font-size: 14px;
 }
-.admin-avatar p{
+
+.admin-avatar p {
     color: #2f2e2e;
     font-weight: 800;
     margin: 0;
     font-size: 14px;
 }
-.admin-avatar a{
-  text-decoration: none;  
-  color: #ff0000b2;
-  font-size:1.2rem;
+
+.admin-avatar a {
+    text-decoration: none;
+    color: #ff0000b2;
+    font-size: 1.2rem;
 }
-.accordion-button{
+
+.accordion-button {
     font-size: 1.2rem;
     gap: 5px
-   
 }
-.accordion-body{
+
+.accordion-body {
     padding: 0;
-   
+
 }
-.accordion-button:not(.collapsed){
+
+.accordion-button:not(.collapsed) {
     background-color: #6ab99125;
     color: #6ab991;
-   
+
 }
-.accordion-body a{
+
+.accordion-body a {
     display: block;
     text-decoration: none;
     width: 100%;
@@ -256,11 +281,12 @@ margin: 0;
     justify-content: flex-start;
     padding-left: 3rem;
     gap: 10px;
-    border-right:8px  solid #6ab991;
-   
-    border-bottom:1px  solid #6ab991;
+    border-right: 8px solid #6ab991;
+
+    border-bottom: 1px solid #6ab991;
 }
-.accordion-body a i{
+
+.accordion-body a i {
     font-size: 1.2rem;
     margin-bottom: 6px;
 }
@@ -327,173 +353,314 @@ span {
     padding: 40px;
 }
 
-.content .table-videos,.content .table-videos thead {
+.content .table-videos,
+.content .table-videos thead {
     border-bottom: 2px solid #6ab991;
 }
+
 .content .table-videos thead {
     color: #6ab991;
 }
-.content .table-videos tbody tr th{
+
+.content .table-videos tbody tr th {
     color: #6ab991;
     font-size: 0.6em;
 }
-.content .table-videos tbody tr td{
+
+.content .table-videos tbody tr td {
     font-size: 0.6em;
     overflow-x: auto;
-    
+
 }
 
-.content .table-videos tbody tr td.control-list a{
+.content .table-videos tbody tr td.control-list a {
     margin-left: 0.5em;
     border: 1px solid #6ab991;
     padding: 0.4em;
     text-decoration: none;
-    border-radius:3px;
+    border-radius: 3px;
     transition: all 0.4s linear;
 }
-.content .table-videos tbody tr td.control-list a:hover{
+
+.content .table-videos tbody tr td.control-list a:hover {
     background-color: #6ab99173;
 }
+
 /* ###################################### */
 /* #########INICIO TELA LIST MEMBERS ########### */
 /* ###################################### */
-.content-members{
-overflow-y: auto;
-width: 100%;
-height: 100%;
+.content-members {
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
 }
+
 .card-list-members {
     /* background-color: aqua; */
     display: flex;
     margin-top: 1rem;
-   /* border-left:10px solid #6ab991 ; */
-   
+    /* border-left:10px solid #6ab991 ; */
+
     position: relative;
 }
-.image-card-list-members{
-    width:15%;
+
+.image-card-list-members {
+    width: 15%;
     max-width: 20em;
-   
+
     position: relative;
-   display: flex;
-   justify-content: center;
- 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
 
 }
-.image-card-list-members img{
+
+.image-card-list-members img {
     position: absolute;
     width: 100%;
     max-width: 5em;
-    height: 100%;
+    height: 4em;
     left: 25%;
     border-radius: 50%;
-   
-   
+    display: none;
+
+
+
 }
-.content-card-list-members{
+
+.content-card-list-members {
     width: 100%;
+    margin: 0;
+
 }
-.personal-data-title{
-    background: linear-gradient(217deg, #6ab99126 , #6ab991 80.71%);
-    border-radius: 5px;   
+
+.personal-data-title {
+    background: linear-gradient(217deg, #6ab99126, #6ab991 80.71%);
+    border-radius: 5px;
     width: 100%;
     color: white;
     padding-left: 3px;
-    font-size: 1.5em;
+    font-size: 0.6em;
 
-    
+
+
 }
-.diviser{
+
+.diviser {
     width: 100%;
     height: 0.2rem;
-    background: linear-gradient(217deg, #6ab99126 , #6ab991 80.71%);
+    background: linear-gradient(217deg, #6ab99126, #6ab991 80.71%);
     margin-top: 10px;
 
 }
-.personal-data{
-   display: flex;
+
+.personal-data {
+    /* display: flex;
   align-items: center;
-  justify-content: space-between;
-   
+  justify-content: space-between; */
+
 }
-.personal-data  p{
-   
-    display: block;
-    margin: 0;
+
+.personal-data p {
+
+
+
+    font-size: 0.8em;
 }
-.personal-data .info-personal,.contact-data,.info-sistem,.control-member{
+
+.personal-data .info-personal,
+.contact-data,
+.info-sistem {
+    /* border-left: 8px solid #6ab991;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5px;
+    margin-right: 1rem;
+    width: 30%;
+    height: 100%;
+    overflow-x: auto; */
+
+    line-height: 0px;
+
+
+}
+
+.contact-data p#email {
+    display: none;
+}
+
+.info-personal p span {
+    margin-right: 10px;
+
+}
+
+.control-member,
+.info-data {
+    display: none;
+}
+
+.view-member {
     border-left: 8px solid #6ab991;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 5px;
     margin-right: 1rem;
-    width: 30%;
-   
+    width: 100%;
+    text-decoration: none;
+
 }
-.control-member a button{
-    padding: 1px;
-    margin-bottom: 2px;
-    font-size:0.8em;
-    width: 50%;
+
+.view-member a {
+    color: #579b79;
+    text-decoration: none;
 }
+
+
+
 /* ###################################### */
 /* #########INICIO TELA FORMULÀRIO VIDEO ########### */
 /* ###################################### */
 
-.content .form-videos{
+.content .form-videos {
     overflow-y: auto;
     width: 100%;
     height: 95%;
     margin-top: 20px;
     margin-bottom: 20px;
-   
+
 }
-.content .form-videos .mb-3 label{
+
+.content .form-videos .mb-3 label {
     color: #6ab991;
 }
-.btn-content-save{
-display: flex;
-justify-content: flex-end;
+
+.btn-content-save {
+    display: flex;
+    justify-content: flex-end;
 }
+
 /* ###################################### */
 /* #########INICIO TELA FORM MEMBER########### */
 /* ###################################### */
-.form-member{
+.form-member {
     overflow-y: auto;
     overflow-x: hidden;
     width: 100%;
     height: 100%;
-    
+
 }
-.form-member form div label{
-  
+
+.form-member form div label {
+
     color: #6ab991;
-    padding-right:10px;
-    padding-left:10px;
+    padding-right: 10px;
+    padding-left: 10px;
     border-radius: 5px;
 }
-.form-member i{
+
+.form-member i {
     color: #6ab991;
     font-size: 1.5em;
 }
-input[type="date"]::-webkit-calendar-picker-indicator{
-color: #6ab991;
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #6ab991;
+}
+
+
+/*##################################################*/
+/*#########INICIO TELA VIEW MEMBERS DESCK###########*/
+/*##################################################*/
+.date-personal-view {
+    width: 100%;
+    height: 20%;
+    background-color: #524f4f;
+    background-color: #FFFFFF;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #6ab991 50%, #335e48 100%);
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+    margin-top: 2.4rem;
+}
+
+.date-personal-view .image-avatar-view {
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: #6ab991;
+}
+
+.date-personal-view div.image-avatar-view img {
+    width: 100%;
+    max-height: 115px;
+    opacity: 1;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #6ab991;
+    padding: 4px;
+    background-color: white;
+    margin-bottom: 5px;
+}
+.name-member-view{
+    background: linear-gradient(217deg, #6ab99126, #6ab991 80.71%);
+    color: white;
+    width: 100%;
+    height: auto;
+    
+    padding-left:2rem;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.267);
+    
+    box-shadow: 0 1px 1px rgb(255 0 0 / 57%);
+  
+}
+.name-member-view h2{
+    font-size: 1.1em;
+    padding: 5px;
+    margin: 0;
+}
+.date-personal-views{
+  
+    width: 100%;
+    height: 41vh;
+    background-color: white;
+   box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.13) ;
+    padding: 10px;
+    border-bottom-right-radius:8px ;
+    border-bottom-left-radius:8px ;
+border-bottom:8px solid #6ab991;
+border-top:2px solid rgba(255, 0, 0, 0.568);
+overflow-y: auto;
+  
+}
+.date-personal-views p{
+    margin: 0;
+    width: 100%;
+   color: #6ab991;
+   
 }
 @media (min-width:740px) {
+
     /* ###################################### */
     /* #########INICIO TELA ASIDE DESCK########### */
     /* ###################################### */
     .admin-main {
         grid-template-areas:
-        "logo nav nav"
-        "aside section section"
-        "aside footer footer";
+            "logo nav nav"
+            "aside section section"
+            "aside footer footer";
         grid-template-columns: 1fr 2fr 2fr;
-        
-        
+
+
     }
-    .admin-avatar{
+
+    .admin-avatar {
         padding: 10px;
         margin-top: 10px;
         background-color: white;
@@ -501,6 +668,7 @@ color: #6ab991;
         height: 28vh;
         /* background: repeating-radial-gradient(#6ab991, #6ab9917a 20%); */
     }
+
     .logo-admin img {
         width: 70px;
     }
@@ -510,8 +678,8 @@ color: #6ab991;
         width: auto;
         height: auto;
         transform: translateX(0);
-   
-     box-shadow: none;
+
+        box-shadow: none;
 
     }
 
@@ -527,25 +695,237 @@ color: #6ab991;
         font-size: 2rem;
         text-align: center;
     }
+
     /* ###################################### */
     /* #########INICIO TELA HOME DESCK########### */
     /* ###################################### */
 
+    /* ###################################### */
+    /* #########INICIO TELA MEMBERS DESCK########### */
+    /* ###################################### */
+    .content-members {
+        overflow-y: auto;
+        width: 100%;
+        height: 100%;
 
+    }
+
+    .card-list-members {
+        /* background-color: aqua; */
+        display: flex;
+        margin-top: 1rem;
+        /* border-left:10px solid #6ab991 ; */
+
+        position: relative;
+    }
+
+    .image-card-list-members {
+        width: 15%;
+        max-width: 20em;
+
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+
+    }
+
+    .control-member,
+    .contact-data {
+        display: block;
+    }
+
+    .image-card-list-members img {
+        display: block;
+        position: absolute;
+        width: 100%;
+        max-width: 5em;
+        height: 100%;
+        left: 25%;
+        border-radius: 50%;
+
+
+    }
+
+    .content-card-list-members {
+        width: 100%;
+    }
+
+    .personal-data-title {
+        background: linear-gradient(217deg, #6ab99126, #6ab991 80.71%);
+        border-radius: 5px;
+        width: 100%;
+        color: white;
+        padding-left: 3px;
+        font-size: 1.5em;
+
+
+    }
+
+    .diviser {
+        width: 100%;
+        height: 0.2rem;
+        background: linear-gradient(217deg, #6ab99126, #6ab991 80.71%);
+        margin-top: 10px;
+
+    }
+
+    .personal-data {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .personal-data p {
+        font-size: 1rem;
+        display: flex;
+        margin: 0;
+
+    }
+
+    .personal-data p span {
+        margin-right: 10px;
+    }
+
+    .contact-data p#email {
+        display: flex;
+    }
+
+    .personal-data .info-personal,
+    .contact-data,
+    .info-sistem,
+    .control-member {
+        border-left: 8px solid #6ab991;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 5px;
+        margin-right: 1rem;
+        width: 30%;
+        height: 100%;
+        overflow-x: auto;
+        line-height: 1.5rem;
+
+    }
+
+    .view-member {
+        border-left: 8px solid #6ab991;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 5px;
+        margin-right: 1rem;
+        width: 15%;
+        text-decoration: none;
+
+    }
+
+    .view-member a {
+        color: #579b79;
+        text-decoration: none;
+    }
+
+    .control-member a button {
+        padding: 1px;
+        margin-bottom: 2px;
+        font-size: 0.8em;
+        width: 50%;
+    }
+
+    /*##################################################*/
+    /*#########INICIO TELA VIEW MEMBERS DESCK###########*/
+    /*##################################################*/
+    .date-personal-view {
+        width: 100%;
+        height: 20%;
+        background-color: #524f4f;
+        margin-top: 2.4rem;
+        background-color: #FFFFFF;
+        background-image: linear-gradient(180deg, #FFFFFF 0%, #6ab991 50%, #335e48 100%);
+    }
+
+    .date-personal-view .image-avatar-view {
+        width: 16%;
+        height: 100%;
+
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        color: #6ab991;
+    }
+
+    .date-personal-view div.image-avatar-view img {
+        width: 100%;
+        max-width: 210px;
+        max-height: 210px;
+        opacity: 1;
+        position: absolute;
+        border-radius: 50%;
+        border: 3px solid #6ab991;
+        padding: 4px;
+    
+    }
+
+     .name-member-view{
+        background: linear-gradient(217deg, #6ab99126, #6ab991 80.71%);
+        color: white;
+        width: 100%;
+        height: auto;
+        padding-left:2rem ;
+        box-shadow: 0 1px 1px rgba(255, 0, 0, 0.568);
+        padding-bottom: 0;
+    }
+    .name-member-view h2{
+        font-size: 2em;
+        margin-bottom: 1px;
+    }
+    .date-personal-views{
+      
+       height: 41vh;
+    }
+    .date-personal-views p{
+      font-size: 1.3em;
+    
+       
+    }
+    /* ################################################## */
+    /* #########INICIO TELA FORMULÀRIO VIDEO ############*/
+    /* ##################################################*/
+
+    .content .form-videos {
+        overflow-y: auto;
+        width: 100%;
+        height: 95%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+    }
+
+    .content .form-videos .mb-3 label {
+        color: #6ab991;
+    }
+
+    .btn-content-save {
+        display: flex;
+        justify-content: flex-end;
+    }
 
     /* ###################################### */
     /* #########INICIO TELA Video DESCK########### */
     /* ###################################### */
-    .content .table-videos{
+    .content .table-videos {
         margin-top: 0.5em;
     }
-    .content .table-videos tbody tr th{
-        font-size: 1em ;
-    }
-    .content .table-videos tbody tr td{
+
+    .content .table-videos tbody tr th {
         font-size: 1em;
     }
+
+    .content .table-videos tbody tr td {
+        font-size: 1em;
+    }
+
 }
-
-
-
