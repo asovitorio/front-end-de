@@ -27,6 +27,7 @@ const pagesAdminControllers = {
       about: "active",
       servico: "",
     };
+   
     const token = req.token;
     const {data:about} = await api.get('/about')
     return res.render("admin/site/about", { user, active, title:about[0].title,about,token,url});

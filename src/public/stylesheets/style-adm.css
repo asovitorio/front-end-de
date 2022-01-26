@@ -224,6 +224,7 @@ body {
     border: 2px solid #6ab991;
     border-radius: 50%;
     max-height: 130px;
+    max-width: 130px
 }
 
 .admin-avatar span {
@@ -706,7 +707,8 @@ overflow-y: auto;
     .content-members {
         overflow-y: auto;
         width: 100%;
-        height: 100%;
+        height: 97%;
+        margin-top: 24px;
 
     }
 
