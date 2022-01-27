@@ -226,14 +226,15 @@ const pagesAdminControllers = {
       `/members/${req.params.id}`,
       config
     );
-     
+     const msg =  req.flash('pass-reset')?false: req.flash('pass-reset')
     return res.render("admin/members/employee-view", {
       user,
       active,
       title: "Perfil",
       member,
       url,
-      formatDate
+      formatDate,
+      msg
     });
   },
   logout: (req, res) => {

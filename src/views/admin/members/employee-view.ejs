@@ -4,6 +4,7 @@
 
   <%- include('../partials/header.ejs') %>
   <%- include('../partials/aside.ejs') %>
+
   <section class="section-adm">
     <div class="content">
       <h1><i class="icon-user"></i> <%=title%></h1>
@@ -38,28 +39,165 @@
             Membro DE: <span
               class="badge <%=member.time?'bg-success':'bg-danger'%> text-ligth"><%=member.time?'Sim':'não'%></span>
           </p>
-          <p type="button" class="">
+          <hr>
+          <p type="button" class="" id="is-user">
             Usuário:
             <% if(member.user){%>
             <span
-              class="badge <%=member.user.status?'bg-success':'bg-warning'%> text-ligth"><%=member.user.status?'Admnistrador':'Padrão'%></span>
+              class="badge <%=member.user.status?'bg-success':'bg-info'%> text-ligth"><%=member.user.status?'adm':'user'%></span>
 
+            <div class="control-member-view">
+              <a href="" class="role" c><i class="icon-shield" data-target="#reset-password"></i>Editar privilégio</a>
+              <a href="" class="pass"><i class="icon-loop2"></i> resetar senha</a>
+              <a href="" class="del"><i class="icon-bin"></i> excluir </a>
+            </div>
             <%}else{%>
             <span class="badge bg-danger text-ligth">Não</span>
+            <div class="control-member-view">
+              <a href="" class="create-user" id="create-user"><i class="icon-user"></i> criar usuário</a>
+
+            </div>
             <%}%>  
+                
+              </span>
+            </p>
+            
+            
+          </div>
           
-          </span>
-        </p>
-    </div>
-      </div>
-</div>
         </div>
-    </section>
+      </div>
+      
+    </div>
+  </section>
+  <div class="modal-view">
+    <div class="card">
+      <h5 class="card-header" style="color: #6ab991;">
+       <span><i class="icon-user"  data-target="#reset-password"></i> Controle de usuário</span>
+            <span><i class="icon-cancel-circle btn-close-modal"></i></span>
+            </h5>
+            <div class="card-body">
+              <div class="form-user">
+              </div>
+            </div>
+        </div>
+      </div>
 
-    <%- include('../partials/footer.ejs') %>
+      <%- include('../partials/footer.ejs') %>
 </main>
-
 <script>
+  const formUser = document.querySelector('.form-user')
+  const btnCloseModal = document.querySelector('.btn-close-modal')
+  const modalView = document.querySelector('.modal-view')
+  const card = document.querySelector('.card')
+  // btn de atualização privilégio
+  const role = document.querySelector('.role')
+  // btn de resetar a senha
+  const passwordReset = document.querySelector('.pass')
+  // btn de criar usuário
+  const createUser = document.querySelector('#create-user')
+  
+  // btn de deletar usuário
+  const deleteUser = document.querySelector('.del')
+ 
+  // btn de submit usuário
+  const btnSave = document.querySelector('.btn-save')
+  
+  // form
+  
+
+
+  btnCloseModal.addEventListener('click', (e) => {
+    e.preventDefault()
+    card.classList.toggle('card-show')
+    modalView.classList.toggle('show')
+  })
+  '<% if(member.user){%>'
+  role.addEventListener('click', (e) => {
+    e.preventDefault()
+    modalView.classList.toggle('show')
+    card.classList.toggle('card-show')
+    formUser.innerHTML = `
+    <h5 class="card-title">Escolha o privilégio</h5>
+      <form action="/admin/view/member?_method=PUT" class=form-user-submit method="post">
+           <div class="input-group mb-3">
+            <input type="hidden" name="id" value="<%=member.user.id%>">
+            <input type="hidden" name="member_id" value="<%=member.id%>">
+             <select class="custom-select" id="select-modal" name="status">
+               <option value="true">adm</option>
+               <option value="false">user</option>
+             </select>
+           </div>
+          <button href="#" class="btn btn-save"><i class="icon-cloud-check"> </i> Atualizar</button>
+      </form>
+`
+  })
+  const formSubmit = document.querySelector('.form-user-submit')
+  
+ 
+  console.log(formSubmit);
+  passwordReset.addEventListener('click', (e) => {
+    e.preventDefault()
+    modalView.classList.toggle('show')
+    card.classList.toggle('card-show')
+    formUser.innerHTML = `
+    <h2>Tem certeza que vai resetar a senha?</h2>
+      <form action="/admin/view/user/reset" method="post">
+        <h5 class="card-title">Escolha o privilégio</h5>
+           <div class="input-group mb-3">
+            <input type="hidden" name="id" value="<%=member.user.id%>">
+            <input type="hidden" name="member_id" value="<%=member.id%>">
+            <input type="hidden" name="isUser" value="true">
+             <select class="custom-select" id="select-modal" name="status">
+               <option value="true">adm</option>
+               <option value="false">user</option>
+             </select>
+             </div> 
+          <button href="#" class="btn btn-save"><i class="icon-cloud-check"> </i> sim</button>
+      </form>
+`
+  })
+  deleteUser.addEventListener('click', (e) => {
+    e.preventDefault()
+    modalView.classList.toggle('show')
+    card.classList.toggle('card-show')
+    formUser.innerHTML = `
+    <h2>Tem certeza que vai <b>DELETAR</b> o usuário: <%=member.name%>?</h2>
+      <form action="/admin/user/delete" method="post">
+           <div class="input-group mb-3">
+            <input type="hidden" name="id" value="<%=member.user.id%>">
+            <input type="hidden" name="member_id" value="<%=member.id%>">
+           
+           
+             </div> 
+          <button href="#" class="btn btn-save"><i class="icon-cloud-check"> </i> sim</button>
+      </form>
+`
+  })
+
+'<% }else{%>'
+createUser.addEventListener('click', (e) => {
+    e.preventDefault()
+    modalView.classList.toggle('show')
+    card.classList.toggle('card-show')
+    formUser.innerHTML = `
+  
+      <form action="/admin/user/create" method="post">
+        <h5 class="card-title">Escolha o privilégio</h5>
+           <div class="input-group mb-3">
+            <input type="hidden" name="member_id" value="<%=member.id%>">
+            <input type="hidden" name="isUser" value="true">
+             <select class="custom-select" id="select-modal" name="status">
+               <option selected>Escolha...</option>
+               <option value="true">adm</option>
+               <option value="false">user</option>
+             </select>
+             </div> 
+          <button  class="btn btn-save"><i class="icon-cloud-check"> </i> Salvar</button>
+      </form>
+`
+  })
+'<%}%>'
 
 </script>
 <%- include('../partials/scripts.ejs') %>

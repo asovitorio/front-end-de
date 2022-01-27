@@ -35,6 +35,14 @@ route.get('/admin/members', auth, pagesAdminControllers.members)
 route.get('/admin/create/member', auth, pagesAdminControllers.createViewMember)
 route.get('/admin/view/member/:id', auth, pagesAdminControllers.pageViewMember)
 
+route.put('/admin/view/member', auth, adminControllers.updateUser)
+
+route.post('/admin/view/user/reset', auth, adminControllers.resetPassUser)
+route.post('/admin/user/create', auth, adminControllers.createUser)
+route.post('/admin/user/delete', auth, adminControllers.deleteUser)
+
+
+
 
 
 route.post('/admin/members', auth, avatar.single("avatar"), adminMembersController.create)

@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const { token } = require("morgan");
 const api = require("../api/endpoind");
 
 const adminControllers = {
@@ -33,8 +34,8 @@ const adminControllers = {
   },
   createVideos: async (req, res) => {
     try {
-        const token = req.token
-        console.log(token);
+      const token = req.token;
+      console.log(token);
       const config = {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -49,11 +50,75 @@ const adminControllers = {
           config
         )
       ).data;
-      req.flash('video-create', true)
-      return res.redirect('/admin/create/videos');
+      req.flash("video-create", true);
+      return res.redirect("/admin/create/videos");
     } catch (error) {
-        const msg = false;
-        return res.redirect('/admin/create/videos');
+      const msg = false;
+      return res.redirect("/admin/create/videos");
+    }
+  },
+  updateUser: async (req, res) => {
+    const token = req.session.token;
+    const { id, status, member_id } = req.body;
+    const user = {
+      id,
+      password: "",
+      status,
+    };
+    if(!status) return res.redirect(`/admin/view/member/${member_id}`);
+    const config = {
+      headers: { Authorization: `Bearer ${token}` },
+    };
+    const { data } = await api.put("/users", user, config);
+    return res.redirect(`/admin/view/member/${member_id}`);
+  },
+  resetPassUser: async (req, res) => {
+    const token = req.session.token;
+    const { id, status, member_id, isUser } = req.body;
+    const user = {
+      member_id,
+      isUser,
+      status,
+    };
+    if(!status) return res.redirect(`/admin/view/member/${member_id}`);
+    const config = {
+      headers: { Authorization: `Bearer ${token}` },
+    };
+    const { data } = await api.delete(
+      `/users/${id}`,
+
+      config
+    );
+
+   
+
+      const { data:userCreate } = await api.post(
+        "/users",
+        user,
+        config
+      );
+    //  console.log(userCreate,userDel);
+       return res.redirect(`/admin/view/member/${member_id}`)
+  },
+  createUser: async (req,res) =>{
+    const token = req.session.token;
+    const {status, member_id, isUser } = req.body;
+    try {
+     
+      const config = {
+        headers: { Authorization: `Bearer ${token}`},
+      };
+      const user = {
+        member_id,
+        isUser,
+        status,
+      };
+      const {data:userData} = await api.post("/users",user,config)
+      if(!userData) return res.redirect(`/admin/view/member/${member_id}`);
+      return res.redirect(`/admin/view/member/${member_id}`)
+      
+    } catch (error) {
+     return res.redirect(`/admin/view/member/${member_id}`);
     }
   },
   update: async (req, res) => {
@@ -78,6 +143,25 @@ const adminControllers = {
       res.send("erro token invalid    " + error);
     }
   },
+  deleteUser: async (req,res) =>{
+
+    try {
+      const token = req.session.token;
+      const {id,member_id} = req.body;
+      const config = {
+        headers: { Authorization: `Bearer ${token}` },
+      };
+      const { data } = await api.delete(
+        `/users/${id}`,
+  
+        config
+      );
+      return res.redirect(`/admin/view/member/${member_id}`)
+      
+    } catch (error) {
+      
+    }
+  }
 };
 
 module.exports = adminControllers;

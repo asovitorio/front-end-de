@@ -14,14 +14,74 @@
 img {
     position: relative;
 }
-
+a{
+    text-decoration: none;
+}
 body {
     font-family: 'Roboto', cursive, sans-serif;
 
 
 }
+.modal-view{
+    display: none;
+    width:100vw;
+    height: 100vh;
+    background-color: #2f2e2eef;
+    position: absolute;
+    top: 0;
+    padding: 1rem;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+   
 
+}
+.modal-view .card{
+   transform: translateY(-180%);
+   transition: all 0.5s linear;
+}
+.modal-view .card-header{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.modal-view .card-header i.icon-cancel-circle{
+    font-size: 1.5rem;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    cursor: pointer;
+    background-color: #6ab991;
+    color: white;
+    transition: all 0.3s linear;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #6ab991;
+}
+.modal-view .card-header i.icon-cancel-circle:hover{
+    
+    background-color: #008341;
+    box-shadow: 0 0 0 4px #008341;
+    
 
+}
+.show{
+    display: flex;
+    
+}
+.modal-view .card-show{
+    transition: all .5s linear;
+    transform: translateY(0);
+}
+#select-modal{
+    width: 100%;
+    height: 2rem;
+}
+.modal-view .card{
+    width: 100%;
+}
+.accordion-body{
+    width: 100%;
+}
 .icon-bin {
     color: rgba(255, 94, 94, 0.876);
 }
@@ -646,8 +706,34 @@ overflow-y: auto;
    color: #6ab991;
    
 }
-@media (min-width:740px) {
+.control-member-view{
+    
+    display: flex;
+    justify-content: center;
+  gap: 5px;
+    flex-direction: column;
+   padding: 10px; 
+}
+.control-member-view a{
+    font-size: 1rem;
 
+}
+.control-member-view a.role{
+    color: #335e489d;
+}
+.control-member-view a.del{
+    color: rgba(255, 94, 94, 0.876);;
+}
+@media (min-width:740px) {
+.modal-view{
+
+    width: 80vw;
+
+}
+.modal-view .card{
+    width: 80%;
+    border-bottom: 15px solid #6ab991;
+}
     /* ###################################### */
     /* #########INICIO TELA ASIDE DESCK########### */
     /* ###################################### */
@@ -892,6 +978,24 @@ overflow-y: auto;
       font-size: 1.3em;
     
        
+    }
+    .control-member-view{
+    
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        padding: 10px;
+        flex-direction: row;
+    }
+    .control-member-view a{
+        font-size: 1.2rem;
+    
+    }
+    .control-member-view a.role{
+        color: #335e489d;
+    }
+    .control-member-view a.del{
+        color: rgba(255, 94, 94, 0.876);;
     }
     /* ################################################## */
     /* #########INICIO TELA FORMULÀRIO VIDEO ############*/
