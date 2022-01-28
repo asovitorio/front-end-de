@@ -42,6 +42,12 @@ const pagesControllers = {
      
         return res.render('pages/video-view',{title:'Video',icon:'icon-play',episode,volta:'/videos'})
     },
+    viewMemberDe: async(req,res) => {
+       
+         const {data:member} = (await api.get(`/members/${req.params.id}`))
+         console.log(member);
+        return res.render('pages/member-view-de',{title:'#EQUIPE-DE ',icon:'icon-user',volta:'/#time',member,formatDate})
+    },
 
     
    

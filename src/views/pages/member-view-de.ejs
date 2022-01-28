@@ -1,0 +1,41 @@
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/header-pages.ejs') %>
+
+<main class="content-member">
+    <div class="date-personal-view">
+        <div class="image-avatar-view">
+          <img src="<%=member.file.path%> " alt="<%=member.full_name%>">
+        </div>
+        <div class="name-member-view">
+          <h2><%=member.name%> - <%=member.rf.replace(/(\d{3})(\d{3})(\d{1})/, "$1.$2-$3")%></h2>
+        </div>
+        <div class="date-personal-views">
+          <p type="button" class="">
+            Nome: <span class="badge text-dark"><%=member.full_name%></span>
+          </p>
+         
+          <p type="button" class="">
+            Função: <span class="badge text-dark"><%=member.func%></span>
+          </p>
+          <p type="button" class="">
+            Email: <span class="badge text-dark"><%=member.email%></span>
+          </p>
+          <p type="button" class="">
+            Celular: <span class="badge text-dark"><%=member.cellphone%></span>
+          </p>
+          
+          <hr>
+           <p type="button" class="">
+            Descrição: <span class="badge text-dark"></span>
+          </p>
+          <span><%=member.description%></span>
+            
+          </div>
+          
+        </div>
+</main>
+
+    
+   
+    <%- include('../partials/footer.ejs') %>
+    <%- include('../partials/scripts.ejs') %>

@@ -21,7 +21,7 @@
                 </svg>
             </div>
             <div class="timeline-content <%=index%2===0?"":"right"%>">
-                <h2><%=informative.title%></h2>
+                <h2><%= informatives.length - index  %> - <%=informative.title%></h2>
                 <p>
                    <div> <b>Data:</b>  <%=formatDate(informative.created_at)%>  </div>
                     <%=informative.description%>

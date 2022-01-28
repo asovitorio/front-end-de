@@ -123,6 +123,7 @@ body {
     /* box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.26); */
     margin-top: 10px;
     padding: 1rem;
+   
 }
 
 .content h1 {
@@ -636,14 +637,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /*##################################################*/
 .date-personal-view {
     width: 100%;
-    height: 20%;
-    background-color: #524f4f;
-    background-color: #FFFFFF;
-    background-image: linear-gradient(180deg, #FFFFFF 0%, #6ab991 50%, #335e48 100%);
-    /* position: absolute; */
-    /* top: 0; */
-    /* left: 0; */
-    margin-top: 2.4rem;
+      height: 20%;
+      background-color: #524f4f;
+      margin-top: 2.4rem;
+      background-color: #FFFFFF;
+      background-image: linear-gradient(180deg, #FFFFFF 0%, #6ab991 50%, #335e48 100%);
+    
 }
 
 .date-personal-view .image-avatar-view {
@@ -660,62 +659,54 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .date-personal-view div.image-avatar-view img {
     width: 100%;
-    max-height: 115px;
-    opacity: 1;
-    position: absolute;
-    border-radius: 50%;
-    border: 3px solid #6ab991;
-    padding: 4px;
-    background-color: white;
-    margin-bottom: 5px;
+      max-width: 210px;
+      max-height: 210px;
+      opacity: 1;
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid #6ab991;
+      padding: 4px;
+      background-color:white;
+
 }
-.name-member-view{
+
+ .name-member-view{
     background: linear-gradient(217deg, #6ab99126, #6ab991 80.71%);
     color: white;
     width: 100%;
     height: auto;
-    
-    padding-left:2rem;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.267);
-    
-    box-shadow: 0 1px 1px rgb(255 0 0 / 57%);
-  
+    padding-left:2rem ;
+    box-shadow: 0 1px 1px rgba(255, 0, 0, 0.568);
+    padding-bottom: 0;
 }
 .name-member-view h2{
-    font-size: 1.1em;
-    padding: 5px;
-    margin: 0;
+    font-size: 1.3em;
+    margin-bottom: 1px;
 }
 .date-personal-views{
-  
-    width: 100%;
-    height: 41vh;
-    background-color: white;
-   box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.13) ;
-    padding: 10px;
-    border-bottom-right-radius:8px ;
-    border-bottom-left-radius:8px ;
-border-bottom:8px solid #6ab991;
-border-top:2px solid rgba(255, 0, 0, 0.568);
-overflow-y: auto;
+  overflow: auto;
+  height: 19rem;
   
 }
 .date-personal-views p{
-    margin: 0;
-    width: 100%;
-   color: #6ab991;
+  font-size: 1em;
+
+  margin: 0;
    
 }
 .control-member-view{
-    
+
     display: flex;
+    gap: 20px;
     justify-content: center;
-  gap: 5px;
-    flex-direction: column;
-   padding: 10px; 
+    padding: 10px;
+    flex-direction: row;
 }
 .control-member-view a{
-    font-size: 1rem;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 .control-member-view a.role{

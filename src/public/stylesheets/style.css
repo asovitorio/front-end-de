@@ -385,12 +385,12 @@ main {
 
   position: relative;
 
-
-
+  
+  
 }
 
 #about .image img {
-
+ 
   position: relative;
 
   z-index: 1;
@@ -407,7 +407,7 @@ main {
 
 #about .image::before {
   content: '';
-  height: 100%;
+ height: 100%;
   width: 100%;
   background-color: var(--base-color);
   position: absolute;
@@ -739,8 +739,20 @@ line-height: 28px;
   color: white;
   font-size: 1.5rem;
   margin: 0;
+  display: flex;
 }
-
+#time .card .member-view-de{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+#time .card .member-view-de:hover{
+  background-color: var(--base-color);
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  transition: all .3s linear;
+}
 /* ========== FIM  TIME=========== */
 
 /* Styles css of footer */
@@ -1054,8 +1066,98 @@ large device: 992
 }
 
 /* ##########  FIM VIEW-VIDEO ########## */
+/* ##########  VIEW-VIDEO - MEMBER VIEW DE ########## */
+/*##################################################*/
+/*#########INICIO TELA VIEW MEMBERS DESCK###########*/
+/*##################################################*/
+.content-member{
+  width: 100%;
+  margin-top: 200px;
+  height: 100%;
+  position: relative;
+  padding: 0 4rem;
+}
+.date-personal-view {
+  width: 100%;
+  height: 100%;
+  max-height: 15rem;
+  background-color: #524f4f;
+  background-color: #FFFFFF;
+  background-image: linear-gradient(180deg, #FFFFFF 0%, #6ab991 50%, #335e48 100%);
+ 
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  margin-top: 2.4rem;
+}
 
+.date-personal-view .image-avatar-view {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: #6ab991;
+}
 
+.date-personal-view div.image-avatar-view img {
+  width: 74%;
+  max-height: 100%;
+  opacity: 1;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #6ab991;
+  padding: 4px;
+  background-color: white;
+  margin-bottom: 5px;
+  background-color: white;
+}
+.name-member-view{
+  background: linear-gradient(217deg, #6ab99126, #6ab991 80.71%);
+  color: white;
+  width: 100%;
+  height: auto;
+  
+  padding-left:2rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.267);
+  
+  box-shadow: 0 1px 1px rgb(255 0 0 / 57%);
+
+}
+.name-member-view h2{
+  font-size: 4.1em;
+  padding: 5px;
+  margin: 0;
+}
+.date-personal-views{
+
+  width: 100%;
+  height: 50vh;
+  background-color: white;
+ box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.13) ;
+  padding: 10px;
+  border-bottom-right-radius:8px ;
+  border-bottom-left-radius:8px ;
+border-bottom:8px solid #6ab991;
+border-top:2px solid rgba(255, 0, 0, 0.568);
+overflow-y: auto;
+
+}
+.date-personal-views p,span{
+ 
+  
+ color: #6ab991;
+ font-size: 2rem;
+ 
+ 
+}
+.date-personal-views span{
+  color: #524f4f;
+  text-align: justify;
+  line-height: 3rem;
+}
 @media (min-width:992px) {
   .text p {
     font-size: 1.2rem;
@@ -1153,7 +1255,23 @@ large device: 992
     width: 50vw;
     text-align: justify;
   }
-
+ 
+  #about .text p{
+    height: 65vh;
+    overflow-y: auto;
+  }
+  #about .image img {
+    height: 75vh;
+    
+  
+  }
+  #about .image::before {
+    content: '';
+   height: 75vh;
+   max-height:27rem;
+    
+  
+  }
   /* =====events====== */
   #events {
     margin: 0;
@@ -1346,6 +1464,72 @@ large device: 992
 
   .content-video .video .descriptyon-video p {
     height: 50vh;
+  }
+   /*##################################################*/
+    /*#########INICIO TELA VIEW MEMBERS DESCK###########*/
+    /*##################################################*/
+    .date-personal-view {
+      width: 100%;
+      height: 20%;
+      background-color: #524f4f;
+      margin-top: 2.4rem;
+      background-color: #FFFFFF;
+      background-image: linear-gradient(180deg, #FFFFFF 0%, #6ab991 50%, #335e48 100%);
+  }
+
+  .date-personal-view .image-avatar-view {
+      width: 16%;
+      height: 100%;
+
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      color: #6ab991;
+  }
+
+  .date-personal-view div.image-avatar-view img {
+      width: 100%;
+      max-width: 210px;
+      max-height: 210px;
+      opacity: 1;
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid #6ab991;
+      padding: 4px;
+      background-color: white
+  
+  }
+
+   .name-member-view{
+      background: linear-gradient(217deg, #6ab99126, #6ab991 80.71%);
+      color: white;
+      width: 100%;
+      height: auto;
+      padding-left:2rem ;
+      box-shadow: 0 1px 1px rgba(255, 0, 0, 0.568);
+      padding-bottom: 0;
+  }
+  .name-member-view h2{
+      font-size: 2em;
+      margin-bottom: 1px;
+  }
+  .date-personal-views{
+    
+     height: 60vh;
+  }
+  .date-personal-views p,span{
+    
+   color: #6ab991;
+   font-size: 1.3rem;
+   
+   
+  }
+  .date-personal-views span{
+    color: #524f4f;
+    text-align: justify;
+    line-height: 2rem;
   }
 
   /* ############## FIM VIEW VIDEO ############ */

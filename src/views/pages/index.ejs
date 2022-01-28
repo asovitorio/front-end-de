@@ -81,18 +81,18 @@
   <section class="section" id="events">
     <div class="container">
       <div class="context-header">
-        <h2 class="title-2"><%=//event[0].title  %> </h2>
-        <p><%=//event[0].description%> </p>
+        <h2 class="title-2"><%=event[0].title  %> </h2>
+        <p><%=event[0].description%> </p>
       </div>
       <header>
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <% //event[0].files.forEach((image,index) =>{%>
+            <% event[0].files.forEach((image,index) =>{%>
 
-            <div class="carousel-item <%=//index==0? 'active':''%>">
-              <img src="<%=//image.path%>" height="10rem" class="d-block w-100" alt="<%=//image.file_name%>">
+            <div class="carousel-item <%=index==0? 'active':''%>">
+              <img src="<%=image.path%>" height="10rem" class="d-block w-100" alt="<%=image.file_name%>">
             </div>
-            <%//})%>
+            <%})%>
            
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
@@ -188,7 +188,7 @@
     <div class="container">
       <div class="context-header">
         <h2 class="title-2">Nossa Equipe</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio eaque nam explicabo ipsam officia quas
+        <p>Nossa equipe está sempre pronta e preparada para atendê-lo de forma profissional e humanizada!!
         </p>
       </div>
       <div class="row ">
@@ -202,8 +202,8 @@
               </div>
             </div>
             <div class="card-body">
-              <h5 class="card-title"><%=member.func%> <%= member.name%> </h5>
-              <p class="card-text"><%=member.description%></p>
+              <h5 class="card-title"><a href="/view-member-de/<%=member.id%> " class="member-view-de"><%=member.func%> <%= member.name%> </a></h5>
+              <p class="card-text"><%=member.email%></p>
               <a href="https://api.whatsapp.com/send?phone=+55<%=member.cellphone%>&text=Olá Gostaria de conversar"
                 class="btn btn-primary"><i class="icon-whatsapp"></i>Entrar em contato</a>
             </div>

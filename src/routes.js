@@ -16,6 +16,7 @@ route.get('/informativos',pagesControllers.informativos)
 route.get('/galeria',pagesControllers.galeria)
 route.get('/login',pagesControllers.login)
 route.get('/view-video',pagesControllers.viewVideo)
+route.get('/view-member-de/:id',pagesControllers.viewMemberDe)
 
 
 // ############ Administrativo ############
@@ -29,21 +30,14 @@ route.get('/admin/home', auth, pagesAdminControllers.home)
 route.get('/admin/about', auth, pagesAdminControllers.about)
 route.get('/admin/event', auth, pagesAdminControllers.event)
 
-
-
 route.get('/admin/members', auth, pagesAdminControllers.members)
 route.get('/admin/create/member', auth, pagesAdminControllers.createViewMember)
 route.get('/admin/view/member/:id', auth, pagesAdminControllers.pageViewMember)
 
 route.put('/admin/view/member', auth, adminControllers.updateUser)
-
 route.post('/admin/view/user/reset', auth, adminControllers.resetPassUser)
 route.post('/admin/user/create', auth, adminControllers.createUser)
 route.post('/admin/user/delete', auth, adminControllers.deleteUser)
-
-
-
-
 
 route.post('/admin/members', auth, avatar.single("avatar"), adminMembersController.create)
 
