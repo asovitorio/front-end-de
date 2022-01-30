@@ -53,15 +53,18 @@
         formData.append('id', id.value)
         formData.append('title', title.value)
         formData.append('description', description.value)
-        formData.append('carousel', imageEvent.files)
-        console.log(formData.get('carousel'));
+        for (let index = 0; index < imageEvent.files.length; index++) {
+           
+            formData.append('carousel', imageEvent.files[index])
+            
+        }
+      
         const config = {
             headers: {
                 Authorization: `Bearer <%=token%>`,
                 "Content-Type": `multipart/form-data; boundary=${formData._boundary}`,
             },
         };
-
         const resposta = await axios.put('<%=url%>/event', formData, config)
         console.log(resposta);
         if (resposta) {
@@ -84,7 +87,7 @@
                 "hideMethod": "fadeOut"
             }
 
-            formAbout.reset()
+            formEvent.reset()
 
         }
     })

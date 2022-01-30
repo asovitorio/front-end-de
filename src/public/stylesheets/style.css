@@ -853,7 +853,7 @@ line-height: 28px;
 
 #videos .card {
   width: 90%;
-  height: 40rem;
+  height: auto;
   margin: 1rem auto;
   padding: 0 0 2rem 0;
   position: relative;
@@ -890,11 +890,17 @@ line-height: 28px;
 #videos .card .text {
   font-size: 1.5rem;
   margin: 0 auto;
+  line-height: 2.2rem;
+ 
 }
 
 #videos .card .text span {
   color: var(--base-color);
   font-weight: 800;
+}
+.video-describe{
+ padding: 0 3rem;
+ 
 }
 
 /*
@@ -1361,32 +1367,47 @@ overflow-y: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;
+   
     justify-content: center;
     padding-left: 2rem;
     padding-right: 2rem;
   }
 
   #videos .card {
-    height: auto;
     width: 100%;
-    max-width: 20rem;
+    max-width: 27rem;
+    height: 30rem;
   }
 
   #videos .card h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
+   
+    
   }
 
   #videos .card img {
     width: 100%;
-    height: 10rem;
+    height: 12rem;
   }
 
   #videos .card a i {
     font-size: 5rem;
   }
 
-  #videos .card .text {
+  #videos .card .video-describe .text {
     font-size: 0.7rem;
+    line-height: 1.1rem;
+      
+  }
+  #videos .card .video-describe{
+    padding:0 1rem;
+  
+    
+  }
+  #videos .card .video-describe .text span{
+    font-size: 0.7rem;
+   
+   
   }
 
   /* ############# TELA LOGIN ############# */
