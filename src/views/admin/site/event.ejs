@@ -6,11 +6,12 @@
     <%- include('../partials/aside.ejs') %>
     <section class="section-adm">
         <div class="content">
+
             <h1><i class="icon-images"></i> <%=title%></h1>
             <div class="form-videos">
                 <form action="" method="POST" id="form-event" enctype="multipart/form-data">
                     <% if(event.length > 0){%>
-                        <input type="hidden" name="id" value="<%=event[0].id%> ">
+                        <input type="hidden" name="id" value="<%=event[0].id%>">
                         <% }%>
                     <div class="mb-3">
                         <label for="title-about" class="form-label">Titulo</label>
@@ -50,10 +51,10 @@
     formEvent.addEventListener("submit", async (e) => {
         e.preventDefault()
         const formData = new FormData();
-        formData.append('id', id.value)
+        formData.append('id', id.value.trim())
         formData.append('title', title.value)
         formData.append('description', description.value)
-        for (let index = 0; index < imageEvent.files.length; index++) {
+        for (let index = 0; index <= imageEvent.files.length; index++) {
            
             formData.append('carousel', imageEvent.files[index])
             

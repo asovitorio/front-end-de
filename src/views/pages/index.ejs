@@ -79,6 +79,7 @@
   <div class="divider-1"></div>
   <!-- ####### SLIDES DEPOIMENTOS ######## -->
   <section class="section" id="events">
+    <% if(event.length>0){%> 
     <div class="container">
       <div class="context-header">
         <h2 class="title-2"><%=event[0].title  %> </h2>
@@ -156,8 +157,8 @@
     </div>
     </header>
     </div>
+    <% } %> 
   </section>
-
   <!-- ####### CONTACTS ######## -->
   <div class="divider-2"></div>
   <section class="section" id="contact">
