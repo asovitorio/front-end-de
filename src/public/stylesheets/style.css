@@ -910,6 +910,9 @@ line-height: 28px;
   gap: 1rem;
   padding: 1rem 5rem;
 }
+#galery .galery-view-images-content{
+  width: 100%;
+}
 #galery .card{
 height: 20rem;
 padding: 0;
@@ -918,6 +921,7 @@ padding: 0;
 #galery .card .title-event-card h2{
   font-size: 2.2rem;
   color: #6ab991;
+  text-align: center;
 }
 #galery .card .img-event-card{
   position: relative;
@@ -934,7 +938,7 @@ padding: 0;
   height: 10rem;
   margin: 0;
   position: absolute;
-  border: 5px solid #6ab991;
+  border: 3px solid #6ab991;
   border-radius: 50%;
   
 }
@@ -969,6 +973,70 @@ z-index: 4;
 left:264px;
 z-index: 5;
 }
+/* ################## EVENT VIEW ##################### */
+#galery-view{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+galery-view-images-content
+#galery-view .galery-view-images-content{
+  width: 100%;
+}
+
+#galery-view .galery-view-image{
+width: 100%;
+margin: 2rem auto 0;
+
+}
+#galery-view .galery-view-image img{
+  height: 60rem;
+  transition: all 0.5 linear;
+}
+#galery-view .select-view-image{
+  display: flex;
+  width: 100%;
+  height: 15rem;
+  background: linear-gradient(-270deg,
+  hsla(var(--hue), 36%, 57%, 1) 0%,
+  hsla(var(--hue), 65%, 88%, 0.34)100%);
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  overflow: auto;
+}
+#galery-view .select-view-image img{
+  width: 11rem;
+  height: 11rem;
+  clip-path: circle();
+  border-radius: 50%;
+  background-color: white;
+ filter: grayscale(100%);
+}
+#galery-view .select-view-image img:hover{
+  transition: all 0.5s linear;
+  filter: grayscale(0);
+}
+#galery-view .select-view-image .image-view-current{
+  transition: all 0.5s linear;
+  filter: grayscale(0);
+ 
+ 
+}
+#galery-view .title-galery-view h2{
+  font-size: 4rem;
+  color: var(--base-color);
+  text-align: center;
+  width: 100%;
+ }
+ #galery-view .description-galery-view p{
+  font-size: 33px;
+  line-height: 2;
+  padding: 0 3rem;
+  margin: 0 auto;
+  text-align: justify;
+ }
+/* ################################################### */
 
 /* ################################### */
 /*
@@ -1193,10 +1261,8 @@ large device: 992
   color: white;
   width: 100%;
   height: auto;
-  
   padding-left:2rem;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.267);
-  
   box-shadow: 0 1px 1px rgb(255 0 0 / 57%);
 
 }
@@ -1478,7 +1544,8 @@ overflow-y: auto;
    
   }
 
-  /* ############# TELA LOGIN ############# */
+
+  /* ############# TELA GALERY ############# */
   #galery{
     display: flex;
     justify-content:space-around;
@@ -1487,7 +1554,7 @@ overflow-y: auto;
    
   }
   #galery .card{
-    width: 40rem;
+    width: 35rem;
     height: 20rem;
   }
   #galery .card .title-event-card h2{
@@ -1498,6 +1565,8 @@ overflow-y: auto;
   #galery .card .img-event-card .img-event-contain{
     width: 63%;
   }
+  /* ############ GALERY VIEW ################## */
+
   /* ############# ################# */
   /* ############# TELA LOGIN ############# */
   .login-content .login .card-login {
@@ -1542,7 +1611,37 @@ overflow-y: auto;
   }
 
   /* ############# FIM TELA LOGIN ############# */
-
+#galery-view {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: flex-start;
+  
+}
+#galery-view .galery-view-image{
+  box-shadow:-345px -53px 0px #6ab991;
+}
+#galery-view .galery-view-image img{
+ height: 65vh; 
+}
+#galery-view .select-view-image{
+  height: 17vh;
+}
+#galery-view .select-view-image img{
+  height: 7rem;
+}
+#galery-view .title-galery-view h2{
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+ 
+}
+#galery-view .description-galery-view p{
+  line-height: 1.2;
+  font-size: 1.4rem;
+  overflow-y: auto;
+  height: 80vh;
+  
+}
   /* ############## iNICIO VIEW VIDEO DESCK-TOP ############ */
 
   .content-video .video {

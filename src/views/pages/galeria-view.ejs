@@ -1,11 +1,47 @@
 <%- include('../partials/head.ejs') %>
 <%- include('../partials/header-pages.ejs') %>
 <main id="galery-view">
-    
-  
+    <div class="galery-view-images-content">
+        <div class="galery-view-image">
+            <img  src="<%=event.files[0].path%>" alt="">
+        </div>
+        <div class="select-view-image">
+            <%event.files.forEach((image,index) => {%>
+            <img class="img-galery-view  <%=index==0?'image-view-current':''%>   " src="<%=image.path%> " alt="">
+            <%  }); %>
+        </div>
+    </div>
+    <div class="description-galery-view">
+        <div class="title-galery-view">
+            <h2><%= event.title %> </h2>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem et placeat eaque saepe unde, voluptatem eius corrupti eveniet qui modi a vitae reiciendis sed veritatis, magnam quaerat, ipsum cum iusto.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, voluptatum a pariatur, laboriosam ducimus ipsum vero ratione commodi obcaecati quis nihil optio necessitatibus aliquid, ad expedita corporis dolore nesciunt eaque!Lorem
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem et placeat eaque saepe unde, voluptatem eius corrupti eveniet qui modi a vitae reiciendis sed veritatis, magnam quaerat, ipsum cum iusto.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, voluptatum a pariatur, laboriosam ducimus ipsum vero ratione commodi obcaecati quis nihil optio necessitatibus aliquid, ad expedita corporis dolore nesciunt eaque!Lorem
+        </p>
+    </div>
+
 </main>
 
 
 
-
+<%- include('../partials/footer.ejs') %>
 <%- include('../partials/scripts.ejs') %>
+<script>
+    const images = document.querySelectorAll('.img-galery-view')
+    const imageView = document.querySelector('.galery-view-image')
+    images.forEach((image,index)=>{
+        image.addEventListener('click', e =>{
+            imageView.innerHTML = `<img src="${image.getAttribute('src')}" alt="">`
+            for (let index = 0; index < images.length; index++) {
+                images[index].classList.remove("image-view-current")
+            }
+            e.preventDefault()
+           image.classList.toggle("image-view-current")
+            console.log(image.getAttribute('src'));
+            
+        })
+    })
+</script>
