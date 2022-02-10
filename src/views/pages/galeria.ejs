@@ -1,6 +1,23 @@
 <%- include('../partials/head.ejs') %>
 <%- include('../partials/header-pages.ejs') %>
+<main id="galery">
+    <% events.forEach((event,index) => { %>
 
+    <div class="card">
+        <div class="title-event-card">
+            <h2><%=events.length - index%>#Evento - <%=event.title%></h2>
+        </div>
+        <div class="img-event-card">
+            <div class="img-event-contain">
+                <% event.files.forEach((img,index) => { %>
+                <img id="img-event-<%=index%>" src="<%=img.path%> " alt="">
+                <% }); %>
+            </div>
+        </div>
+        <a class="btn btn-even-card" href="/view-event/<%=event.id  %> ">Visualizar</a>
+    </div>
+    <% }); %>
+</main>
 
 
 

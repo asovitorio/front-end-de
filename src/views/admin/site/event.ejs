@@ -51,7 +51,7 @@
     formEvent.addEventListener("submit", async (e) => {
         e.preventDefault()
         const formData = new FormData();
-        formData.append('id', id.value.trim())
+        // formData.append('id', id.value.trim())
         formData.append('title', title.value)
         formData.append('description', description.value)
         for (let index = 0; index <= imageEvent.files.length; index++) {
@@ -66,7 +66,7 @@
                 "Content-Type": `multipart/form-data; boundary=${formData._boundary}`,
             },
         };
-        const resposta = await axios.put('<%=url%>/event', formData, config)
+        const resposta = await axios.post('<%=url%>/event', formData, config)
         console.log(resposta);
         if (resposta) {
             toastr["success"]('Evento', 'Atualizada com Sucesso')

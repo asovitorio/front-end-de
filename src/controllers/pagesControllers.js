@@ -31,8 +31,9 @@ const pagesControllers = {
         
         return res.render('pages/informativos',{title:'Informativos',icon:'icon-file-pdf',volta:'/#service',informatives,formatDate})
     },
-    galeria: (req,res) => {
-        return res.render('pages/galeria',{title:'Galeria',icon:'icon-images',volta:'/#service'})
+    galeria:async (req,res) => {
+        const {data:events} =(await api.get('/event'))
+        return res.render('pages/galeria',{title:'Galeria',icon:'icon-images',volta:'/#service',events})
     },
     login: (req,res) => {
         return res.render('pages/login',{title:'Login',icon:'icon-images',msg:false})
@@ -45,8 +46,14 @@ const pagesControllers = {
     viewMemberDe: async(req,res) => {
        
          const {data:member} = (await api.get(`/members/${req.params.id}`))
-         console.log(member);
+         
         return res.render('pages/member-view-de',{title:'#EQUIPE-DE ',icon:'icon-user',volta:'/#time',member,formatDate})
+    },
+    viewGalery: async(req,res) => {
+       
+         const {data:event} = (await api.get(`/event/${req.params.id}`))
+         console.log(event);
+        return res.render('pages/galeria-view',{title:'Galeria',icon:'icon-images',volta:'/#time',formatDate})
     },
 
     

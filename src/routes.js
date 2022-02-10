@@ -17,6 +17,7 @@ route.get('/galeria',pagesControllers.galeria)
 route.get('/login',pagesControllers.login)
 route.get('/view-video',pagesControllers.viewVideo)
 route.get('/view-member-de/:id',pagesControllers.viewMemberDe)
+route.get('/view-event/:id',pagesControllers.viewGalery)
 
 
 // ############ Administrativo ############
