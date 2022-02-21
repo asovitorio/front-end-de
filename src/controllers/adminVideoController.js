@@ -28,6 +28,21 @@ const adminVideoController ={
             return res.redirect('/admin/create/videos');
         }
       },
+      delete: async (req, res) => {
+        const token = req.token
+        console.log(token);
+      const config = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      };
+        try {
+          const response = await api.get(`/delete/episodes/${req.params.id}`,config)
+          return res.redirect('/admin/videos')
+        } catch (error) {
+          return res.send(error);
+        }
+      },
 }
 
 module.exports = adminVideoController

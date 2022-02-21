@@ -6,6 +6,7 @@ const pagesAdminControllers = require('./controllers/pagesAdminControllers')
 const pageViewMember = require('./controllers/pagesAdminControllers')
 const avatar = require("./middlewares/avatar");
 const { auth } = require('./middlewares/auth')
+const adminVideoController = require('./controllers/adminVideoController')
 
 const route = express.Router()
 // ############  Pages ############
@@ -46,6 +47,7 @@ route.post('/admin/members', auth, avatar.single("avatar"), adminMembersControll
 route.get('/admin/videos', auth, pagesAdminControllers.videos)
 route.get('/admin/create/videos', auth, pagesAdminControllers.formVideos)
 route.post('/admin/create/videos', auth, adminControllers.createVideos)
+route.get('/admin/delete/videos/:id', auth, adminVideoController.delete)
 
 
 route.get('/admin/list-informatives', auth, pagesAdminControllers.informatives)
