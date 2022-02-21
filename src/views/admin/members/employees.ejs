@@ -11,7 +11,7 @@
             <div class="content-members">
 
 
-                <% members.map(member =>{%>
+                <% members.map((member) =>{%>
                 <div class="card-list-members">
                     <div class="image-card-list-members">
                         <img src="<%= member.path %> " alt="">
@@ -33,21 +33,24 @@
                             <div class="control-member">
                                 <a href="">
                                     <button type="button" class="btn <%=member.user_id?'btn-success':'btn-danger'%>">
-                                        <i class="icon-user"></i> Usuário <span class="badge bg-light text-dark"><%=member.user_id?'sim':'não'%></span>
+                                        <i class="icon-user"></i> Usuário <span
+                                            class="badge bg-light text-dark"><%=member.user_id?'sim':'não'%></span>
                                     </button>
                                 </a>
                                 <a href="">
                                     <button type="button" class="btn <%=member.time?'btn-success':'btn-danger'%>">
-                                        <i class="icon-user-tie"></i>   Equipe DE <span class="badge bg-light text-dark"><%=member.time?'sim':'não'%></span>
+                                        <i class="icon-user-tie"></i> Equipe DE <span
+                                            class="badge bg-light text-dark"><%=member.time?'sim':'não'%></span>
                                     </button>
                                 </a>
                             </div>
                             <div class="view-member">
-                              
-                                <a href="/admin/view/member/<%=member.id  %> "><i class="icon-eye"> Visualizar</i> </a>
+
+                                <a href="/admin/view/member/<%=member.id  %> "  ><i class="icon-eye"> Visualizar</i> </a>
                                 <a href="/admin/view/member/<%=member.id  %> "><i class="icon-pencil"> Editar</i> </a>
-                                <a href="/admin/view/member/<%=member.id  %> "><i class="icon-bin"> Apagar</i> </a>
-                                
+                                <a href="/admin/delete/member/<%=member.id%>" class="del-member"><i class="icon-bin">
+                                        Apagar</i> </a>
+
                             </div>
 
                         </div>
@@ -59,11 +62,48 @@
             </div>
         </div>
     </section>
+    <div class="modal-view">
+        <div class="card">
+            <h5 class="card-header" style="color: #6ab991;">
+                <span><i class="icon-user" data-target="#reset-password"></i> Controle de Funcionário</span>
+                <span><i class="icon-cancel-circle btn-close-modal"></i></span>
+            </h5>
+            <div class="card-body">
+                <div class="form-member">
 
+
+                </div>
+            </div>
+        </div>
+    </div>
     <%- include('../partials/footer.ejs') %>
 </main>
 
 <script>
+    const btnDel = document.querySelectorAll('.del-member')
+    const btnCloseModal = document.querySelector('.btn-close-modal')
+    const modalView = document.querySelector('.modal-view')
+    const card = document.querySelector('.card')
+    const formMembers = document.querySelector('.form-member')
 
+
+
+    btnDel.forEach((item) => {
+        item.addEventListener('click', e => {
+            e.preventDefault()
+            modalView.classList.toggle('show')
+            card.classList.toggle('card-show')
+            formMembers.innerHTML = `
+            <h2 style="color: #6ab991;">Você tem certeza que vai deletar o Funcionário?</h2>
+            <a  href="${item.getAttribute('href')}" class="del-member" ><i class="icon-bin" style="color: red;"rs>
+                        Sim</i> </a>
+            `
+        })
+    })
+    btnCloseModal.addEventListener('click', (e) => {
+    e.preventDefault()
+    card.classList.toggle('card-show')
+    modalView.classList.toggle('show')
+  })
 </script>
 <%- include('../partials/scripts.ejs') %>

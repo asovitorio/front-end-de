@@ -33,6 +33,7 @@ route.get('/admin/event', auth, pagesAdminControllers.event)
 
 route.get('/admin/members', auth, pagesAdminControllers.members)
 route.get('/admin/create/member', auth, pagesAdminControllers.createViewMember)
+route.get('/admin/delete/member/:id', auth, adminMembersController.delete)
 route.get('/admin/view/member/:id', auth, pagesAdminControllers.pageViewMember)
 
 route.put('/admin/view/member', auth, adminControllers.updateUser)

@@ -905,13 +905,17 @@ line-height: 28px;
 /*############# GALERY ############## */
 
 #galery{
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
   padding: 1rem 5rem;
+  height: 100%;
+  
+ 
 }
 #galery .galery-view-images-content{
   width: 100%;
+  
 }
 #galery .card{
 height: 20rem;
@@ -979,7 +983,7 @@ z-index: 5;
   align-items: center;
   flex-direction: column;
 }
-galery-view-images-content
+
 #galery-view .galery-view-images-content{
   width: 100%;
 }
@@ -992,6 +996,7 @@ margin: 2rem auto 0;
 #galery-view .galery-view-image img{
   height: 60rem;
   transition: all 0.5 linear;
+  cursor: pointer;
 }
 #galery-view .select-view-image{
   display: flex;
@@ -1548,9 +1553,11 @@ overflow-y: auto;
   /* ############# TELA GALERY ############# */
   #galery{
     display: flex;
+    flex-direction:row;
     justify-content:space-around;
     flex-wrap: wrap;
     gap: 1rem;
+    height: 100vh;
    
   }
   #galery .card{
