@@ -914,7 +914,7 @@ line-height: 28px;
   gap: 1rem;
   padding: 1rem 5rem;
   height: 100%;
-  
+  overflow-y: auto;
  
 }
 #galery .galery-view-images-content{
