@@ -385,7 +385,7 @@ main {
 #about .image {
 
   position: relative;
-
+max-width: 80%;
   
   
 }
@@ -425,7 +425,7 @@ line-height: 28px;
 }
 #about .container{
   overflow-y: auto;
-  height:65%;
+  height:80%;
 }
 #about .text p{
   line-height: 1.5;
@@ -1417,8 +1417,12 @@ overflow-y: auto;
     height: 65vh;
     overflow-y: auto;
   }
+  #about .image{
+    max-width: 100%;
+  }
   #about .image img {
     height: 75vh;
+   
     
   
   }
