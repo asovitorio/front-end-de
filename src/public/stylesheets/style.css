@@ -417,13 +417,19 @@ main {
 
 }
 
-#about .text {
+#about  .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 line-height: 28px;
+
+}
+#about .container{
+  overflow-y: auto;
+  height:65%;
 }
 #about .text p{
   line-height: 1.5;
+  
 }
 /*Serviços  */
 #service {
@@ -1404,7 +1410,9 @@ overflow-y: auto;
     width: 50vw;
     text-align: justify;
   }
- 
+  #about .container{
+    height: 100%;
+  }
   #about .text p{
     height: 65vh;
     overflow-y: auto;
