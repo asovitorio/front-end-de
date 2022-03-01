@@ -14,12 +14,13 @@
                     <i class="icon-cog"></i> Site
                 </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse <%=active.home=='active' | active.about=='active' | active.service =='active'?'show':'' %> " aria-labelledby="headingOne"
+            <div id="collapseOne" class="accordion-collapse collapse <%=active.home=='active' | active.listEvent=='active' | active.about=='active' | active.service =='active'?'show':'' %> " aria-labelledby="headingOne"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <a href="/admin/home" id="<%=active.home%>">  <i class="icon-home"></i> HOME</a>
                     <a href="/admin/about" id="<%=active.about%>">  <i class="icon-man"></i> SOBRE</a>
-                    <a href="/admin/event"id="<%=active.service%>">  <i class="icon-images"></i> Evento</a>
+                    <a href="/admin/event"id="<%=active.service%>">  <i class="icon-image"></i> EVENTO</a>
+                    <a href="/admin/list-events"id="<%=active.listEvent%>">  <i class="icon-images"></i> GALERIA</a>
                 </div>
             </div>
         </div>

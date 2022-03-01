@@ -1,6 +1,7 @@
 <%- include('../partials/head.ejs') %>
 <%- include('../partials/header-pages.ejs') %>
 <main id="galery-view">
+    <% if(event){%> 
     <div class="galery-view-images-content">
         <div class="galery-view-image">
             <img  src="<%=event.files[0].path%>" alt="">
@@ -19,7 +20,7 @@
             <%=event.description%> 
         </p>
     </div>
-
+<% } %> 
 </main>
 
 

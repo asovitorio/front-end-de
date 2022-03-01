@@ -144,7 +144,7 @@ const pagesAdminControllers = {
     };
   
     const {data:informatives} = await api.get('/informatives')
-    console.log(informatives);
+    
     return res.render("admin/informatives/list-informatives", {
       user,
       active,
@@ -170,7 +170,7 @@ const pagesAdminControllers = {
     };
     let [msg] = req.flash("informative-create");
     if (!msg) msg = false;
-    console.log(url);
+   
     return res.render("admin/informatives/create-informatives", {
       user,
       active,
@@ -235,6 +235,41 @@ const pagesAdminControllers = {
       url,
       formatDate,
       msg
+    });
+  },
+  listEvent: async (req, res) => {
+    const user = req.user;
+    const active = {
+      home: "",
+      about: "",
+      service: "",
+      employees: "",
+      addMember: "",
+      videos: "",
+      addVideos: "",
+      informative:"",
+      listEvent:"active",
+    };
+    const config = {
+      headers: {
+        Authorization: `Bearer ${req.token}`,
+      },
+    };
+    
+    const {
+      data:events,
+    } = await api.get(
+      `/event`,
+      config
+    );
+   
+    return res.render("admin/site/list-event", {
+      user,
+      active,
+      title: "Lista Galeria",
+      events,
+      url,
+      formatDate,
     });
   },
   logout: (req, res) => {
