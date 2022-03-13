@@ -17,7 +17,7 @@ app.use(session({
   saveUninitialized: true,
   
 }))
-app.use(cors({ origin: "http://despt.com.br:3000/de/api/v1/*", credentials: true }))
+app.use(cors())
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
