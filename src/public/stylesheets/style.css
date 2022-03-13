@@ -333,8 +333,13 @@ main {
 .text p {
   font-size: 1.5rem;
   text-align: justify;
-}
+  
 
+}
+p{
+  font-size: 1.5rem;
+    line-height: 1.5;
+}
 #home .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -676,7 +681,9 @@ line-height: 28px;
   padding: 5rem 0;
   height: auto;
 }
+#time .container .context-header p{
 
+}
 #time .row>div {
   margin-bottom: 2rem;
 }
