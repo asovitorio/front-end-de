@@ -732,7 +732,7 @@ line-height: 28px;
   padding: 2px;
   margin-bottom: 2px;
 }
-
+#time .card .card-header
 #time .card a {
   display: flex;
   margin: 0 auto;
@@ -751,17 +751,52 @@ line-height: 28px;
   margin: 0;
   display: flex;
 }
-#time .card .member-view-de{
+#time .card .card-title {
+  display: flex;
+ 
+  justify-content: center;
+  font-size: 1rem;
+  align-items: center;
   width: 100%;
-  margin: 0 auto;
-  padding: 0;
+  gap: 6px;
 }
-#time .card .member-view-de:hover{
+#time .card .card-title span{
+ width: auto;
+ text-transform: uppercase;
+}
+#time .card .card-title .member-view-de a{
+  
+  padding: 0;
+  margin: 0;
+ 
+}
+#time .card .card-title .member-view-de i{
+  padding: 0;
+  margin: 0;
+  
+  font-size: 1rem;
+  box-shadow: 0px 0px 12px rgba(255, 0, 0, 0.705);
+}
+#time .card .card-title .member-view-de i:hover{
   background-color: var(--base-color);
   color: white;
   padding: 5px;
   border-radius: 10px;
   transition: all .3s linear;
+}
+#time .card .card-body p{
+  padding: 1rem;
+  font-size: 2rem;
+}
+#time .card .card-body .btn-whats{
+  width: 70%;
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 /* ========== FIM  TIME=========== */
 
@@ -928,7 +963,7 @@ line-height: 28px;
   
 }
 #galery .card{
-height: 20rem;
+
 padding: 0;
 
 }
@@ -1011,7 +1046,7 @@ margin: 2rem auto 0;
 #galery-view .select-view-image{
   display: flex;
   width: 100%;
-  height: 15rem;
+  height: 20rem;
   background: linear-gradient(-270deg,
   hsla(var(--hue), 36%, 57%, 1) 0%,
   hsla(var(--hue), 65%, 88%, 0.34)100%);
@@ -1019,6 +1054,7 @@ margin: 2rem auto 0;
   align-items: center;
   gap: 0.6rem;
   overflow: auto;
+  
 }
 #galery-view .select-view-image img{
   width: 11rem;
@@ -1468,11 +1504,20 @@ overflow-y: auto;
 
   /* =============== TIME ============== */
   #time .card {
-    max-height: 22rem;
+    max-height: auto;
   }
 
   #time .card a {
-    width: 80%;
+    width:auto;
+  }
+  #time .card .card-body p{
+    font-size: 0.9rem;
+  }
+  #time .card .card-body .btn-whats{
+    
+    padding: 10px;
+    justify-content: center;
+    margin-bottom: 0;
   }
 
   /*============== Contact ============== */
@@ -1578,7 +1623,7 @@ overflow-y: auto;
   }
   #galery .card{
     width: 35rem;
-    height: 20rem;
+    height: fit-content;
   }
   #galery .card .title-event-card h2{
   font-size: 1.5rem;
@@ -1647,7 +1692,7 @@ overflow-y: auto;
  height: 65vh; 
 }
 #galery-view .select-view-image{
-  height: 17vh;
+  height:22vh;
 }
 #galery-view .select-view-image img{
   height: 7rem;
