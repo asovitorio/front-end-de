@@ -30,9 +30,22 @@
                         <label for="validationDefault04" class="form-label">Função</label>
                         <select class="form-select" name="func" id="func">
                             <option selected disabled value="">Escolha...</option>
-                            <option value="TSTSR">TSTSR</option>
-                            <option value="TSTPL">TSTPL</option>
-                            <option value="TSTJR">TSTJR</option>
+                            <option value="ADVOGADO">ADVOGADO</option>
+                            <option value="AGENTE DE INFORMAÇÕES">AGENTE DE INFORMAÇÕES</option>
+                            <option value="AJUDANTE GERAL">AJUDANTE GERAL</option>
+                            <option value="ANALISTA">ANALISTA</option>
+                            <option value="ARQUITETO">ARQUITETO</option>
+                            <option value="AUXILIAR DE SERVIÇOS">AUXILIAR DE SERVIÇOS</option>
+                            <option value="COPEIRO">COPEIRO</option>
+                            <option value="DIRETOR DE RELAÇÕES INTERNAS">DIRETOR DE RELAÇÕES INTERNAS</option>
+                            <option value="ENGENHEIRO">ENGENHEIRO</option>
+                            <option value="GUINCHEIRO">GUINCHEIRO</option>
+                            <option value="MÉDICO">MÉDICO</option>
+                            <option value="TELEFONISTA">TELEFONISTA</option>
+                            <option value="TIV">TIV</option>
+                            <option value="TMT">TMT</option>
+                            <option value="TPA">TPA</option>
+                            <option value="TST">TST</option>
                         </select>
                     </div>
                     <div class="col-md-3">
@@ -80,6 +93,8 @@
                             <option value="ROE">ROE</option>
                             <option value="GTD">GTD</option>
                             <option value="STR">STR</option>
+                            <option value="BV-1">BV-1</option>
+                            <option value="BV-2">BV-2</option>
 
                         </select>
                     </div>
@@ -103,8 +118,8 @@
                             </select>
                         </div>
                     </div>
-                    
-                   
+
+
 
                     <div class="btn-content-save col-12">
                         <button type="submit" class="btn  btn-save"><i class="icon-cloud-check"
@@ -132,8 +147,8 @@
     // const timeSelect = document.querySelector("#teste")
     const locatio = document.querySelector("#location")
     const gender = document.querySelector('#gender')
-    
-   
+
+
 
     formMembers.addEventListener("submit", async (e) => {
         e.preventDefault()
@@ -158,7 +173,7 @@
             },
         };
         const resposta = await axios.post('<%=url%>/members', formData, config)
-      
+
         if (resposta) {
             toastr["success"]('Funcionário', 'Cadastrado com Sucesso')
             toastr.options = {
@@ -181,8 +196,8 @@
             formMembers.reset()
         }
 
-       
-       
+
+
 
     })
 </script>

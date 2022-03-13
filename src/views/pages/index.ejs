@@ -203,10 +203,13 @@
               </div>
             </div>
             <div class="card-body">
-              <h5 class="card-title"><a href="/view-member-de/<%=member.id%> " class="member-view-de"><%=member.func%> <%= member.name%> </a></h5>
+              <h5 class="card-title"><span><%=member.name%></span>
+                 
+                <a href="/view-member-de/<%=member.id%> " class="member-view-de">  <i class="icon-info"></i> </a>
+              </h5>
               <p class="card-text"><%=member.email%></p>
               <a href="https://api.whatsapp.com/send?phone=+55<%=member.cellphone%>&text=Olá Gostaria de conversar"
-                class="btn btn-primary"><i class="icon-whatsapp"></i>Entrar em contato</a>
+                class="btn btn-primary btn-whats"><i class="icon-whatsapp"></i>Entrar em contato</a>
             </div>
           </div>
         </div>
