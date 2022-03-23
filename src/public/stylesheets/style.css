@@ -1426,7 +1426,7 @@ overflow-y: auto;
   /* ====SERVICES==== */
   #service {
     height: 100vh;
-    overflow-y: hidden;
+    
     padding: 5rem 0;
   }
 
@@ -1444,9 +1444,10 @@ overflow-y: auto;
   }
 
   #service .cards .card {
-    height: 20rem;
+    height: 22rem;
+   
   }
-
+ 
   .container-2 header,
   .context-header {
     margin: 0 auto;
