@@ -266,7 +266,7 @@ const pagesAdminControllers = {
     return res.render("admin/site/list-event", {
       user,
       active,
-      title: "Lista Galeria",
+      title: "Eventos",
       events,
       url,
       formatDate,

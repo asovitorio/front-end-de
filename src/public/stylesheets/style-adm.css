@@ -414,7 +414,12 @@ span {
     justify-content: center;
     padding: 40px;
 }
-
+.table-box{
+    display: block;
+    width: 100%;
+    height: inherit;
+    overflow: auto;
+}
 .content .table-videos,
 .content .table-videos thead {
     border-bottom: 2px solid #6ab991;
@@ -1013,8 +1018,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     /* ###################################### */
     /* #########INICIO TELA Video DESCK########### */
     /* ###################################### */
+    
     .content .table-videos {
         margin-top: 0.5em;
+       
     }
 
     .content .table-videos tbody tr th {
